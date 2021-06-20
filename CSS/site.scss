@@ -1,13 +1,20 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-html {
-    background-color: rgb(36, 36, 36);
-}
+body {
+    background-image: url(/Media/italy.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
 
-h1, p {
-    text-align: center;
-    color: rgb(219, 218, 218);
-}
+@import '_header.scss';
+
+@import '_main.scss';
+
+@import '_footer.scss';
+
+@import '_scrnMobile.scss';
+@import '_scrnTablet.scss';
+@import '_scrnPC.scss';
