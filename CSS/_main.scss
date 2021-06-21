@@ -1,0 +1,139 @@
+main {
+    display: grid;
+    grid-template-rows: 10vh 80vh 20vh 80vh 20vh 100vh 10vh;
+}
+
+/*Sets main menu/top div on page*/
+#mainMenu {
+    grid-row: 2;
+    width: 100vw;
+    text-align: end;
+    display: grid;
+    background:rgba(44, 44, 44, 0.5);
+    grid-template-rows: 3fr 2fr 2fr 12fr 4fr;
+
+    #socialIcons {
+        text-align: start;
+        margin: 12px;
+
+        a img {
+            width: 25px;
+            margin-right: 5px;
+        }
+    }
+
+    h1 {
+        grid-row: 2;
+        position: relative;
+        right: 8vw;
+    }
+
+    p {
+        grid-row: 3;
+        margin-left: 20vw;
+        position: relative;
+        right: 8vw;
+    }
+
+    /*Css for links on main menu area*/
+    #mainBtnsList {
+        grid-row: 4;
+
+        li {
+            position: relative;
+            right: 8vw;
+            margin-top: 2vh;
+            padding: 2vh 0 2vh 0;
+            text-align: center;
+            list-style: none;
+            border: 2px #dadada solid;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        #mainLiHrs {
+            margin-left: 55vw;
+        }
+
+        #mainLiRes {
+            margin-left: 60vw;
+        }
+
+        #mainLiMen {
+            margin-left: 65vw;
+        }
+
+        #mainLiPla {
+            margin-left: 70vw;
+        }
+    }
+
+    /*Img animation on page load*/
+    @keyframes transitionIn {
+        from {
+            transform: rotateZ(180deg)
+        }
+
+        to {
+            transform: rotateZ(0deg);
+        }
+    }
+
+    /*arrow down css and animation*/
+    #pointDown {
+        grid-row: 5;
+        height: 12vh;
+        position: relative;
+        left: 10vw;
+        bottom: 5vh;
+        animation: transitionIn 2s ease-out;
+    }
+}
+
+/*Hours div*/
+#hmHrs {
+    grid-row: 3;
+    position: relative;
+    left: 5vw;
+    background-color: rgba(128, 128, 128, 0.9);
+
+    p {
+        position: relative;
+        left: 10vw;
+        top: 1vh;
+        margin-top: 0.5vh;
+    }
+}
+
+/*Location div*/
+#hmLoc {
+    grid-row: 4;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    h1 {
+        position: relative;
+        top: 2vh;
+    }
+
+    #googleMap {
+        position: relative;
+        top: 5vh;
+        left: 5vw;
+        width: 90vw;
+        height: 60vh;
+    }
+}
+
+/*Contact div*/
+#hmCon {
+    grid-row: 5;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+/*Images div*/
+#hmImg {
+    grid-row: 6;
+    background:rgba(44, 44, 44, 0.8);
+}

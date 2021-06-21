@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knead Pizza</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/site.css">
 </head>
 <body>
@@ -14,14 +16,61 @@
         <div id="smScrnOverlay">
             <ul id="overMenu">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Find Us</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#hmLoc">Find Us</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </div>
     </header>
     <main>
-
+        <div id="mainMenu">
+            <div id="socialIcons">
+                <a href="https://www.facebook.com"><img src="/Media/facebookIcon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com"><img src="/Media/InstagramIcon.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com"><img src="/Media/twitterIcon.png" alt="Twitter"></a>
+                <a href="https://www.pinterest.ca"><img src="/Media/pintrestIcon.png" alt="Pintrest"></a>
+            </div>
+            <h1>It's what you eat</h1>
+            <p>
+                Feel good about ordering it. Feel good about eating it.
+            </p>
+            <ul id="mainBtnsList">
+                <li id="mainLiHrs"><a href="#hmHrs">Hours</a></li>
+                <li id="mainLiRes"><a href="#hmCon">Reserve</a></li>
+                <li id="mainLiMen"><a href="menu.html">Menu</a></li>
+                <li id="mainLiPla"><a href="placeHolder.html">placeHolder</a></li>
+            </ul>
+            <img id="pointDown" src="/Media/favpng_green-arrow-clip-art.png" alt="Down Arrow">
+        </div>
+        <div id="hmHrs">
+            <h1>Hours</h1>
+            <p>
+                Mon-thurs ..... 4pm - Midnight
+            </p>
+            <p>
+                Fri-Sun ..... 4pm - 2am
+            </p>
+            <p>
+                Patio ..... every day 4pm - 11pm
+            </p>
+        </div>
+        <div id="hmLoc">
+            <h1>Find us here</h1>
+            <iframe 
+                id="googleMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.7149466556493!2d-113.97498327591137!3d50.70646655298439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x506fc1eefe385498!2sPizza%20Hut%20Okotoks!5e0!3m2!1sen!2sca!4v1624249986357!5m2!1sen!2sca" 
+                alt="Google Map Location" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+        <div id="hmCon">
+            <h1>Contact</h1>
+        </div>
+        <div id="hmImg">
+            <h1>Check us out</h1>
+        </div>
     </main>
 </body>
 </html>
