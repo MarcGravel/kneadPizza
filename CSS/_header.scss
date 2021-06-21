@@ -1,0 +1,12 @@
+@import '_hamburger.scss';
+
+#topNav {
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    z-index: 5;
+    grid-template-columns: 2fr 15fr repeat(5, 2fr) 1fr;
+}
+  

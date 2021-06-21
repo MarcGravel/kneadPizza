@@ -1,0 +1,134 @@
+/*creates line for hamgburger, is the label for the toggle checkbox*/
+#hamburger {
+    width: 50px;
+    height: 8px;
+    grid-column: 7;
+    justify-self: center;
+    align-self: center;
+    border-top: 8px transparent;
+    border-bottom: 8px transparent;
+    border-radius: 15px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 5;
+
+
+    /*creates top and bottom line for hamburger. also creates transition animation*/
+    &::before, &::after {
+    content: '';
+    width: 50px;
+    height: 8px;
+    background-color: white;
+    border-radius: 9px;
+    grid-column: 7;
+    display: block;
+    position: relative;
+    transition: all 0.6s cubic-bezier(1,0,0,1);
+    }
+
+    /*sets position and animation origin*/
+    &::before {
+    top: -16px;
+    transform-origin: left top;
+    }
+
+    /*sets position and animation origin*/
+    &::after {
+    top: 8px;
+    transform-origin: left bottom;
+    }
+}
+
+/*hides real checkbox*/
+#toggle {
+    visibility: hidden;
+}
+
+/*sets top color and roation position on click*/
+#toggle:checked ~ label::before {
+    background-color: red;
+    transform: rotate(43deg)
+}
+
+/*sets bottom color and roation position on click*/
+#toggle:checked ~ label::after {
+    background-color: red;
+    transform: rotate(-43deg);
+}
+
+/*hides center bar on click*/
+#toggle:checked ~ label {
+    background-color: transparent;
+}
+
+/*Delays center bar (label) animation to match rest of*/
+#toggle ~ label {
+    transition: all 0.6s cubic-bezier(1,0,0,1);
+}
+
+/**********Overlay Menu styling below************/
+
+/*sets position, size, and gradient of overlay*/
+#smScrnOverlay {
+    position: fixed;
+    bottom: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    border-bottom-left-radius: 50%;
+    background-image: linear-gradient(to right top, #d6d2d2, #8c8e8f, #747575, #2c2c2c, #000000);
+    /*animation from top corner on click*/
+    transform: scale(0);
+    transform-origin: top right;
+    transition: all 0.6s ease-out;
+
+    /*aligns list in overlay*/
+    #overMenu {
+        list-style: none;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /*transform used to ensure menu is centered, due to lsit position*/
+        transform: translate(-50%, -50%);
+
+        li {
+           margin: 50px 0px; 
+        }
+
+        li a {
+            color: white;
+            text-decoration: none;
+            font-size: 2.5em;
+            font-weight: 500;
+            padding: 30px;
+            /*this position sets sizing for button bars in the :after*/
+            position: relative;
+
+            /*after create white elements to act as hover buttons for a tags*/
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 50px;
+                width: 100%;
+                background: transparent;
+                border-radius: 50px;
+                box-shadow: 1px 4px rgba(255, 250, 250, 0.514);
+                z-index: -1;
+            }
+            
+            /*button press*/
+            &:active:after {
+                background-image: linear-gradient(to left bottom, #313131, #3e3e3f, #575a5a, #656867, #868685);
+                box-shadow: none;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+}
+
+/*Make menu appear on hamburger click*/
+#toggle:checked ~ #smScrnOverlay {
+    transform: scale(1);
+}
