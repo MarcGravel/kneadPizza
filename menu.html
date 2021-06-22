@@ -5,8 +5,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knead Pizza Menu</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/mainMenu.css">
+    <link rel="stylesheet" href="/CSS/site.css">
 </head>
 <body>
-    
+    <header id="topNav">
+        <input type="checkbox" id="toggle">
+        <label id="hamburger" for="toggle"></label>
+        <div id="smScrnOverlay">
+            <ul id="overMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#anchorLoc">Find Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <header id="phoneBox">
+        <a class="phoneLink" href="tel:14035553641"><h2 id="phoneNbr">403.555.3641</h2></a>
+    </header>
+    <main>
+        <a class="anchorHidden" id="anchorTop" href="#"></a>
+        <div id="mainMenu">
+            <div id="socialIcons">
+                <a href="https://www.facebook.com"><img src="/Media/facebookIcon.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com"><img src="/Media/InstagramIcon.png" alt="Instagram"></a>
+                <a href="https://www.twitter.com"><img src="/Media/twitterIcon.png" alt="Twitter"></a>
+                <a href="https://www.pinterest.ca"><img src="/Media/pintrestIcon.png" alt="Pintrest"></a>
+            </div>
+            <h1>Our Menu</h1>
+            <p>
+                See below for our full list. Or skip ahead!
+            </p>
+            <ul id="mainBtnsList">
+                <li id="mainLiDrinks"><a href="#anchorDrink">Drinks</a></li>
+                <li id="mainLiFood"><a href="#anchorFood">Food</a></li>
+                <li id="mainLiDeserts"><a href="#anchorDeserts">Deserts</a></li>
+            </ul>
+        </div>
+        <section id="drinks">
+            <a class="anchorHidden" id="anchorDrink" href="#"></a>
+            <div id="cocktails">
+                <h1>Cocktail</h1>
+                <h3>JUNGLE BIRD ... 14</h3>
+                <p>Blackstrap Rum, Campari, Pineapple, Lime</p>
+                <h3>MARGARITA ... 15</h3>
+                <p>Tequila, Cointreau, Lime, Agave Nectar</p>
+                <h3>SIDECAR ... 14</h3>
+                <p>Cognac, Cointreau, Lemon</p>
+                <h3>OLD FASHIONED ... 16</h3>
+                <p>Bourbon, Demerara, Bitters</p>
+            </div>
+            <div id="wineBeer">
+                <h1>Vino & Birra</h1>
+                <h3>JEAN BOURDY ... 13 / 30 / 55 </h3>
+                <p>Fresh and lively sparkling Cremant from the iconic Jura winemaker, Jean Bourdy. 100% Chardonnay made in the traditional Champagne method.</p>
+                <h3>TERRA MINUTA ... 14 / 32 / 60</h3>
+                <p>Easy drinking white made from Fiano Minutolo and Greco. Bottled without fining or filtration, this wine has notes of juicy tropical fruit and beautiful minerality.</p>
+                <h3>SCHMITT ROSE ... 15 / 34 / 65</h3>
+                <p>This is a fresh and racy rose best enjoyed chilled and in large quantities. Cherry, raspberry, all spice and liquorice with a savoury finish</p>
+                <h3>PILSNER URQUELL ... 9</h3>
+                <p>16 ounce draught</p>
+                <h3>HOUSE BLONDE ... 7</h3>
+                <p>32 ounce draught</p>
+                <h3>BLINDMAN NEPA ... 9</h3>
+                <p>16 ounce draught</p>
+            </div>
+            <div id="nonAlc">
+                <h1>Non Alcolico</h1>
+                <h3>TEA</h3>
+                <p>Green, Earl Grey, Orange Pekoe, Peppermint</p>
+                <h3>COFFEE</h3>
+                <p>Hot or iced</p>
+                <h3>SODA</h3>
+                <p>Coke, Pepsi, Ginger Ale, Sprite, Dr.Pepper</p>
+                <h3>JUICE</h3>
+                <p>Orange, Apple, Cranberry</p>
+            </div>
+            <div class="topBtn">
+                <a class="backTopBtn" href="#">Back To Top</a>
+            </div>
+        </section>
+        <section id="food">
+            <a class="anchorHidden" id="anchorFood" href="#"></a>
+            <div id=appies>
+                <h1>Antipasti</h1>
+                <h3>POMODORO BRUSCHETTA ... 12</h3>
+                <P>Freshly diced tomato, garlic, basil, olive oil, sea salt & pepper on crostini</P>
+                <h3>CALAMARI FRITTI ... 14</h3>
+                <p>Fried Calamari served with house-made spiced italian Aioli</p>
+                <h3>ARANCINI ... 16</h3>
+                <p>Fontina & Parmigano risotto balls in panko crumbs served with spicy arrabiata sauce</p>
+            </div>
+            <div id="pizza">
+                <h1>Pizza</h1>
+                <h3>MARGHERITA ... 14</h3>
+                <p>Marinara sauce with bocconcini & fresh basil</p>
+                <h3>NAPOLI</h3>
+                <p>Marinara sauce with mozzarella, roasted vegetables & parmigiano</p>
+                <h3>4 MEAT SICILIANA ... 20</h3>
+                <p>Oven-roasted italian sausage, artisan ham, prosciutto, capicola</p>
+                <h3>GORGONZOLA ... 18</h3>
+                <p>Asiago cream sauce with gorgonzola & mozzarella, green apple, peruvian peppers & walnuts.</p>
+                <h3>CAVOLETTI ... 19</h3>
+                <p>Oven-roasted brussel sprouts, prosciutto crisps, gorgonzola, dates, walnuts, honey</p>
+                <h3>VESUVIO ... 17</h3>
+                <p>Soppressata (spicy salami), chili salt, bocconcini, parmigiano</p>
+            </div>
+            <div id="pasta">
+                <h1>Pasta</h1>
+                <h3>EAST COAST LOBSTER ... 24</h3>
+                <P>Canadian lobster sauteed in butter & garlic with smoked paprika cream sauce and mascarpone cream cheese</P>
+                <h3>FOREST MUSHROOM CHICKEN ... 17</h3>
+                <p>Mushrooms and grilled chicken sauteed in garlin and tossed with cream, butter and parmesan</p>
+                <h3>SALMON E NOCCE ... 18</h3>
+                <P>Smoked salmon, asperagus and house made walnut cream sauce & parmagiano</P>
+            </div>
+            <div id="entrees">
+                <h1>Secondi</h1>
+                <h3>PORK TENDERLOIN ALLA ROMANA ... 34</h3>
+                <P>Pan-seared with marsala wine, sage & prosciutto</P>
+                <h3>CIOPPINO SORRENTINO ... 42</h3>
+                <P>Italian sea food stew. Lobster, shrimp, scallops, mussels, salmon, calamari, san marzano tomato sauce, sambuca, garlic, crostino</P>
+                <h3>ALBERTA BEEF TENDERLOIN ... 25</h3>
+                <P>7oz AAA with mixed mushroom, red wine & demi-glace</P>
+            </div>
+            <div class="topBtn">
+                <a class="backTopBtn" href="#">Back To Top</a>
+            </div>
+        </section>
+        <section id="deserts"> 
+            <a class="anchorHidden" id="anchorDeserts" href="#"></a>
+            <h1>Dolci</h1>
+            <h3>KNEAD PIZZA'S TIRAMISU</h3>
+            <p>House-made. Rum & coffee liqueur infused lady fingers, white chocolate, mascarpone cream</p>
+            <h3>TRIO OF ITALIAN GELATI ... 13</h3>
+            <p>Our server will be happy to inform you of today's choices</p>
+            <h3>TORTA DI FORMAGGIO E ARACHIDI ... 12</h3>
+            <P>Peanut butter cheese cake, passion fruit coulis, strawberries</P>
+            <div class="topBtn">
+                <a class="backTopBtn" href="#">Back To Top</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="privPol">Privacy Policy</p>
+        <p id="cpyRit">Copyright 2021 © Knead Pizza</p>
+    </footer>
 </body>
 </html>

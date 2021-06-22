@@ -1,0 +1,132 @@
+main {
+  position: relative;
+  top: 13vh;
+  display: grid;
+  grid-template-rows: 70vh 155vh 190vh 55vh;
+}
+
+/*Nav scroll button postion*/
+.anchorHidden {
+  position: relative;
+  bottom: 13vh;
+  left: 5vw;
+  width: 10vw;
+  visibility: hidden;
+}
+
+.backTopBtn {
+  text-decoration: none;
+  border: 3px #dadada solid;
+  padding: 10px;
+  position: relative;
+  left: 60vw;
+  top: 10vw;
+}
+
+/*main top div*/
+#mainMenu {
+  grid-row: 1;
+  width: 100vw;
+  text-align: end;
+  display: grid;
+  background: rgba(34, 34, 34, 0.5);
+  grid-template-rows: 3fr 2fr 2fr 12fr 4fr;
+  /*Css for links on main menu area*/
+}
+
+#mainMenu #socialIcons {
+  text-align: start;
+  margin: 12px;
+}
+
+#mainMenu #socialIcons a img {
+  width: 25px;
+  margin-right: 5px;
+}
+
+#mainMenu h1 {
+  grid-row: 2;
+  position: relative;
+  right: 8vw;
+}
+
+#mainMenu p {
+  grid-row: 3;
+  margin-left: 20vw;
+  position: relative;
+  right: 8vw;
+}
+
+#mainMenu #mainBtnsList {
+  grid-row: 4;
+}
+
+#mainMenu #mainBtnsList li {
+  position: relative;
+  right: 8vw;
+  margin-top: 3vh;
+  padding: 2vh 0 2vh 0;
+  text-align: center;
+  list-style: none;
+  border: 2px #dadada solid;
+}
+
+#mainMenu #mainBtnsList li a {
+  text-decoration: none;
+}
+
+#mainMenu #mainBtnsList #mainLiDrinks {
+  margin-left: 60vw;
+}
+
+#mainMenu #mainBtnsList #mainLiFood {
+  margin-left: 65vw;
+}
+
+#mainMenu #mainBtnsList #mainLiDeserts {
+  margin-left: 70vw;
+}
+
+/*Global style for all main divs*/
+section h3 {
+  color: #f3f3f3;
+}
+
+section p {
+  margin-left: 7vw;
+  font-size: smaller;
+  font-style: italic;
+}
+
+section h1 {
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  margin-left: 3vw;
+}
+
+section h3, section p {
+  margin-left: 5vw;
+  margin-right: 3vw;
+}
+
+section h3 {
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+
+/*Position and bg color for main content divs*/
+#drinks {
+  background: #3f3f3f;
+  grid-row: 2;
+}
+
+#food {
+  background: #1b1b1b;
+  grid-row: 3;
+}
+
+#deserts {
+  background: #3f3f3f;
+  grid-row: 4;
+}
+/*# sourceMappingURL=mainMenu.css.map */

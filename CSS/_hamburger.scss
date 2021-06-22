@@ -71,8 +71,6 @@
 /*sets position, size, and gradient of overlay*/
 #smScrnOverlay {
     position: fixed;
-    bottom: -50%;
-    right: -50%;
     width: 200%;
     height: 200%;
     border-bottom-left-radius: 50%;
@@ -87,9 +85,10 @@
     #overMenu {
         list-style: none;
         text-align: center;
+        display: inline-block;
         position: relative;
-        top: 70vh;
-        right: 3vw;
+        top: 21vh;
+        left: 23vw;
     
         li {
            margin: 50px 0px; 
