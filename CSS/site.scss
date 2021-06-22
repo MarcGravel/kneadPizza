@@ -5,6 +5,13 @@
     color: #dadada;
 }
 
+/*Smooths scroll when clicking anchor tags, eliminates horizontal scrolling*/
+html {
+    scroll-behavior: smooth;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 h1 {
     font-family: 'Lobster', cursive;
     font-size: 2.5em;

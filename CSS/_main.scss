@@ -1,11 +1,22 @@
 main {
+    position: relative;
+    top: 13vh;
     display: grid;
-    grid-template-rows: 10vh 80vh 20vh 80vh 20vh 100vh 10vh;
+    grid-template-rows: 80vh 20vh 80vh 20vh 200vh;
+}
+
+/*Adjusts anchor scroll due to fixed nav bar postiion*/
+.anchorHidden {
+    position: relative;
+    bottom: 13vh;
+    left: 5vw;
+    width: 10vw;
+    visibility: hidden;
 }
 
 /*Sets main menu/top div on page*/
 #mainMenu {
-    grid-row: 2;
+    grid-row: 1;
     width: 100vw;
     text-align: end;
     display: grid;
@@ -94,33 +105,47 @@ main {
 
 /*Hours div*/
 #hmHrs {
-    grid-row: 3;
-    position: relative;
-    left: 5vw;
+    grid-row: 2;
     background-color: rgba(128, 128, 128, 0.9);
+
+    h1 {
+        position: relative;
+        left: 3vw;
+        width: 20vw;
+    }
 
     p {
         position: relative;
         left: 10vw;
         top: 1vh;
         margin-top: 0.5vh;
+        width: 80vw;
     }
 }
 
 /*Location div*/
 #hmLoc {
-    grid-row: 4;
+    grid-row: 3;
     background-color: rgba(0, 0, 0, 0.8);
+    display: grid;
+    grid-template-rows: 1% 9% 90%;
+
+    #anchorLoc {
+        grid-row: 1;
+    }
 
     h1 {
+        grid-row: 2;
         position: relative;
-        top: 2vh;
+        top: 1vh;
+        left: 3vw;
+        width: 50vw;
     }
 
     #googleMap {
-        position: relative;
-        top: 5vh;
-        left: 5vw;
+        grid-row: 3;
+        justify-self: center;
+        align-self: center;
         width: 90vw;
         height: 60vh;
     }
@@ -128,12 +153,114 @@ main {
 
 /*Contact div*/
 #hmCon {
-    grid-row: 5;
-    background-color: rgba(128, 128, 128, 0.5);
+    grid-row: 4;
+    background-color: rgba(128, 128, 128, 0.7);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    h1 {
+        grid-area: 1 / 1;
+        position: relative;
+        left: 3vw;
+        width: 35vw;
+    }
+
+    p {
+        text-decoration: underline;
+    }
+
+    #phoneLabel {
+        grid-area: 2 / 1;
+        justify-self: center;
+    }
+
+    #emailLabel {
+        grid-area: 2 / 2;
+        justify-self: center;
+    }
+
+    #socialLabel {
+        grid-area: 2 / 3;
+        justify-self: center;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+
+    #phoneBtn {
+        grid-area: 3 / 1;
+        justify-self: center;
+    }
+
+    #mailBtn {
+        grid-area: 3 / 2;
+        justify-self: center;
+    }
+
+    #socialContact {
+
+        grid-area: 3 / 3;
+        justify-self: center;
+        text-align: center;
+        width: 25vw;
+
+        a img {
+            width: 20px;
+            padding: 5%;
+        }
+    }
 }
 
 /*Images div*/
 #hmImg {
-    grid-row: 6;
+    grid-row: 5;
     background:rgba(44, 44, 44, 0.8);
+    display: grid;
+    grid-template-rows: 10vh 5vh 40vh 5vh 130vh;
+
+    h1 {
+        position: relative;
+        left: 3vw;
+        width: 70vw;
+    }
+
+    #vidIntro {
+        grid-row: 2;
+        justify-self: center;
+        text-decoration: underline;
+    }
+
+    #pizzaVid{
+        grid-row: 3;
+        width: 95vw;
+        justify-self: center;
+    }
+
+    #imgIntro {
+        grid-row: 4;
+        justify-self: center;
+        align-self: center;
+        text-decoration: underline;
+    }
+
+    #imgGallery {
+
+        grid-row: 5;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        align-items: center;
+        justify-items: center;
+
+        .galImgs {
+            height: 40vw;
+            width: 40vw;
+            /*object fit ensures the photos are all square*/
+            object-fit: cover;
+            border: 5px black solid;
+        }
+    }
+
 }

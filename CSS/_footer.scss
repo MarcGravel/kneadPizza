@@ -1,0 +1,26 @@
+footer {
+    position: relative;
+    top: 13vh;
+    width: 100vw;
+    height: 13vh;
+    background-color: rgb(75, 74, 74);
+    display: grid;
+    grid-row: repeat(4, 1fr);
+
+    #privPol, #cpyRit {
+        width: 80vw;
+        position: relative;
+        left: 5vw;
+    }
+
+    #privPol {
+        grid-row: 2;
+        
+    }
+
+    #cpyRit {
+        font-size: 0.9em;
+        grid-row: 3;
+        width: 80vw;
+    }
+}

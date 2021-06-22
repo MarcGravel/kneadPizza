@@ -4,4 +4,9 @@
     #toggle, #hamburger {
         display: none;
     }
+
+    /*Makes phone number none clickable*/
+    .phoneLink {
+        pointer-events: none;
+    }
 }
