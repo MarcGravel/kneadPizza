@@ -1,0 +1,84 @@
+main {
+  position: relative;
+  top: 13vh;
+  display: grid;
+  grid-template-rows: 46vh 125vh;
+}
+
+/*animation for imgCarousel. doubling values at 
+different % throughout animation keeps the images still for a bit before
+changing to next image. Also, first and last images in html are the same 
+so once this animation reaches 100% at the last image and resets, 
+the image is the same. gives the illusion of continuous infinit loop*/
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+#imgCarousel {
+  background-color: rgba(80, 80, 80, 0.473);
+  overflow: hidden;
+  position: relative;
+  left: 5vw;
+  width: 90vw;
+  /*creates wide div area and sets image position start*/
+  /*Sets image size and squares all images*/
+}
+
+#imgCarousel #selfCont {
+  position: relative;
+  left: 0;
+  top: 2vh;
+  margin: 0;
+  width: 500%;
+  animation: 20s slider infinite;
+  /*Sets image size and squares all images*/
+}
+
+#imgCarousel #selfCont img {
+  height: 90vw;
+  width: 90vw;
+  object-fit: cover;
+  /*float was used to ensure no edges of other images are 
+            visible between transitions*/
+  float: left;
+  border-radius: 20px;
+}
+
+#aboutUsArticle {
+  background-color: rgba(41, 41, 41, 0.658);
+}
+
+#aboutUsArticle h1, #aboutUsArticle p {
+  position: relative;
+  top: 1vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin-bottom: 4vh;
+}
+/*# sourceMappingURL=mainAbout.css.map */

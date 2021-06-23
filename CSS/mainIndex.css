@@ -52,6 +52,7 @@ main {
 
 #mainMenu #mainBtnsList {
   grid-row: 4;
+  overflow-x: hidden;
 }
 
 #mainMenu #mainBtnsList li {
@@ -72,16 +73,48 @@ main {
   margin-left: 55vw;
 }
 
+#mainMenu #mainBtnsList #mainAHrs {
+  padding: 2vh 16vw 2vh 16vw;
+}
+
+#mainMenu #mainBtnsList #mainAHrs:active {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
 #mainMenu #mainBtnsList #mainLiRes {
   margin-left: 60vw;
+}
+
+#mainMenu #mainBtnsList #mainARes {
+  padding: 2vh 12vw 2vh 12vw;
+}
+
+#mainMenu #mainBtnsList #mainARes:active {
+  background-color: rgba(0, 0, 0, 0.527);
 }
 
 #mainMenu #mainBtnsList #mainLiMen {
   margin-left: 65vw;
 }
 
+#mainMenu #mainBtnsList #mainAMen {
+  padding: 2vh 11vw 2vh 11vw;
+}
+
+#mainMenu #mainBtnsList #mainAMen:active {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
 #mainMenu #mainBtnsList #mainLiPla {
   margin-left: 70vw;
+}
+
+#mainMenu #mainBtnsList #mainAPla {
+  padding: 2vh 2vw 2vh 2vw;
+}
+
+#mainMenu #mainBtnsList #mainAPla:active {
+  background-color: rgba(0, 0, 0, 0.527);
 }
 
 @keyframes transitionIn {
@@ -139,7 +172,7 @@ main {
   position: relative;
   top: 1vh;
   left: 3vw;
-  width: 50vw;
+  width: 60vw;
 }
 
 #hmLoc #googleMap {
@@ -217,7 +250,8 @@ main {
   grid-row: 5;
   background: rgba(44, 44, 44, 0.8);
   display: grid;
-  grid-template-rows: 10vh 5vh 40vh 5vh 130vh;
+  grid-template-rows: 10vh 5vh 40vh 5vh 170vh;
+  overflow-y: scroll;
 }
 
 #hmImg h1 {
@@ -236,6 +270,7 @@ main {
   grid-row: 3;
   width: 95vw;
   justify-self: center;
+  max-width: 560px;
 }
 
 #hmImg #imgIntro {
@@ -248,7 +283,8 @@ main {
 #hmImg #imgGallery {
   grid-row: 5;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 0px;
   align-items: center;
   justify-items: center;
 }
@@ -256,8 +292,20 @@ main {
 #hmImg #imgGallery .galImgs {
   height: 40vw;
   width: 40vw;
+  max-width: 400px;
+  max-height: 400px;
   /*object fit ensures the photos are all square*/
   object-fit: cover;
   border: 5px black solid;
+}
+
+#hmImg #imgGallery .groupOne {
+  position: relative;
+  left: 3vw;
+}
+
+#hmImg #imgGallery .groupTwo {
+  position: relative;
+  right: 3vw;
 }
 /*# sourceMappingURL=mainIndex.css.map */

@@ -2,7 +2,7 @@ main {
     position: relative;
     top: 13vh;
     display: grid;
-    grid-template-rows: 70vh 155vh 190vh 55vh;
+    grid-template-rows: 70vh 155vh 220vh 55vh;
 }
 
 /*Nav scroll button postion*/
@@ -77,12 +77,36 @@ main {
             margin-left: 60vw;
         }
 
+        #mainADrinks {
+            padding: 2vh 12vw 2vh 12vw;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
+        }
+
         #mainLiFood {
             margin-left: 65vw;
         }
 
+        #mainAFood {
+            padding: 2vh 11vw 2vh 11vw;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
+        }
+
         #mainLiDeserts {
             margin-left: 70vw;
+        }
+
+        #mainADeserts {
+            padding: 2vh 6vw 2vh 6vw;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
         }
     }
 }

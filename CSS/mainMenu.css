@@ -2,7 +2,7 @@ main {
   position: relative;
   top: 13vh;
   display: grid;
-  grid-template-rows: 70vh 155vh 190vh 55vh;
+  grid-template-rows: 70vh 155vh 220vh 55vh;
 }
 
 /*Nav scroll button postion*/
@@ -79,12 +79,36 @@ main {
   margin-left: 60vw;
 }
 
+#mainMenu #mainBtnsList #mainADrinks {
+  padding: 2vh 12vw 2vh 12vw;
+}
+
+#mainMenu #mainBtnsList #mainADrinks:active {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
 #mainMenu #mainBtnsList #mainLiFood {
   margin-left: 65vw;
 }
 
+#mainMenu #mainBtnsList #mainAFood {
+  padding: 2vh 11vw 2vh 11vw;
+}
+
+#mainMenu #mainBtnsList #mainAFood:active {
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
 #mainMenu #mainBtnsList #mainLiDeserts {
   margin-left: 70vw;
+}
+
+#mainMenu #mainBtnsList #mainADeserts {
+  padding: 2vh 6vw 2vh 6vw;
+}
+
+#mainMenu #mainBtnsList #mainADeserts:active {
+  background-color: rgba(0, 0, 0, 0.527);
 }
 
 /*Global style for all main divs*/

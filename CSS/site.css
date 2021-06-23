@@ -64,16 +64,16 @@ footer {
   height: 13vh;
   background-color: #4b4a4a;
   display: grid;
-  grid-row: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 footer #privPol, footer #cpyRit {
-  width: 80vw;
   position: relative;
   left: 5vw;
 }
 
 footer #privPol {
+  width: 50vw;
   grid-row: 2;
 }
 
@@ -81,6 +81,18 @@ footer #cpyRit {
   font-size: 0.9em;
   grid-row: 3;
   width: 80vw;
+}
+
+footer .topBtn {
+  position: relative;
+  left: 70vw;
+  top: 5vh;
+}
+
+footer .topBtn .backTopBtn {
+  text-decoration: none;
+  border: 3px #dadada solid;
+  padding: 10px;
 }
 
 @media only screen and (max-width: 599px) {

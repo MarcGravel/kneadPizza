@@ -49,6 +49,8 @@ main {
     /*Css for links on main menu area*/
     #mainBtnsList {
         grid-row: 4;
+        overflow-x: hidden;
+
 
         li {
             position: relative;
@@ -62,22 +64,55 @@ main {
 
         li a {
             text-decoration: none;
+
         }
 
         #mainLiHrs {
             margin-left: 55vw;
         }
 
+        #mainAHrs {
+            padding: 2vh 16vw 2vh 16vw;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
+        }
+
         #mainLiRes {
             margin-left: 60vw;
+        }
+
+        #mainARes {
+            padding: 2vh 12vw 2vh 12vw;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
         }
 
         #mainLiMen {
             margin-left: 65vw;
         }
 
+        #mainAMen {
+            padding: 2vh 11vw 2vh 11vw;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
+        }
+
         #mainLiPla {
             margin-left: 70vw;
+        }
+
+        #mainAPla {
+            padding: 2vh 2vw 2vh 2vw;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
         }
     }
 
@@ -139,7 +174,7 @@ main {
         position: relative;
         top: 1vh;
         left: 3vw;
-        width: 50vw;
+        width: 60vw;
     }
 
     #googleMap {
@@ -219,7 +254,8 @@ main {
     grid-row: 5;
     background:rgba(44, 44, 44, 0.8);
     display: grid;
-    grid-template-rows: 10vh 5vh 40vh 5vh 130vh;
+    grid-template-rows: 10vh 5vh 40vh 5vh 170vh;
+    overflow-y: scroll;
 
     h1 {
         position: relative;
@@ -237,6 +273,7 @@ main {
         grid-row: 3;
         width: 95vw;
         justify-self: center;
+        max-width: 560px;
     }
 
     #imgIntro {
@@ -250,17 +287,31 @@ main {
 
         grid-row: 5;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 0px;
         align-items: center;
         justify-items: center;
 
         .galImgs {
             height: 40vw;
             width: 40vw;
+            max-width: 400px;
+            max-height: 400px;
             /*object fit ensures the photos are all square*/
             object-fit: cover;
             border: 5px black solid;
         }
+
+        .groupOne {
+            position: relative;
+            left: 3vw;
+        }
+
+        .groupTwo {
+            position: relative;
+            right: 3vw;
+        }
+        
     }
 
 }
