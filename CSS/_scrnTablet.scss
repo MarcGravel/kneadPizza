@@ -1,49 +1,233 @@
 @media only screen and (min-width: 600px) {
 
-    /*Makes phone number none clickable*/
-    .phoneLink {
-        pointer-events: none;
-    }
+    #topNav {
 
-    h1 {
-        font-size: 3.5em;
-    }
-
-    #hmHrs {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 3fr;
-
-        h1 {
-            grid-column: 1;
-            grid-row: 1;
-            width: 50vw;
+        #logoLink {
+            
+            #logo {
+                width: 90px;
+            }
         }
 
-        p {
-            grid-column: 1;
-            grid-row: 2;
-            width: 40vw;
-        }
+        /*Hamburger sizing and animation adjustment*/
+        #hamburger {
+            width: 80px;
+            height: 12px;
 
-        #wkEnds {
-            position: relative;
-            top: 5vh;
-        }
+            &::before, &::after {
+                width: 80px;
+                height: 12px;
+                position: relative;
+            }
 
-        #patio {
-            position: relative;
-            top: 9vh;
-        }
+            &:before {
+                top: -22px;
+            }
 
+            &:after {
+                top: 10px;
+            }
+        }
         
-        #hrsImg {
-            display: inline-block;
-            grid-column: 2;
-            grid-row: 1 / 3;
-            width: 50vw;
-            height: 20vh;
-            object-fit: cover;
+        #toggle:checked ~ label::before {
+            transform: rotate(36deg)
+        }    
+
+        #toggle:checked ~ label::after {
+            transform: rotate(-36deg)
+        } 
+
+        /*Screen Overlay postion adjustment and button sizing*/
+        #overMenu {
+            top: 20vh;
+            left: 28vw;
+
+            li {
+                margin: 100px 0px; 
+            }
+     
+            li a {
+                 font-size: 4.5em;
+                 padding: 70px;
+     
+                 /*after create white elements to act as hover buttons for a tags*/
+                 &::after {
+                     height: 80px;
+                }
+            } 
+        }   
+    }
+
+    #phoneBox {
+        height: 5vh;
+
+        /*Makes phone number none clickable*/
+        .phoneLink {
+            pointer-events: none;
+            font-size: 1.6em;
+        }
+
+    }
+
+    main {
+        position: relative;
+        top: 15vh;
+
+        /*adjusts anchor points for scrollable buttons as top nav size has changed*/
+        .anchorHidden {
+            position: relative;
+            bottom: 15vh;
+            width: 10vw;
+        }
+
+        #mainMenu {
+
+            #socialIcons {
+        
+                a img {
+                    width: 40px;
+                    margin-right: 15px;
+                }
+            }
+
+            h1 {
+                font-size: 4.5em;
+            }
+        
+            p {
+                font-size: 1.8em;
+            }
+
+            #mainBtnsList {
+                
+                li a {
+                    font-size: 1.6em;
+                }
+
+                #mainALoc {
+                    padding: 2vh 6vw 2vh 6vw;
+                }
+            }
+
+            #pointDown {
+                height: 15vh;
+            }
+        }
+    
+        #hmHrs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 3fr;
+    
+            /*adjusts positioning of anchor due to grid*/
+            #anchorHrs {
+                position: relative;
+                bottom: 34vh;
+            }
+    
+            h1 {
+                grid-column: 1;
+                grid-row: 1;
+                width: 50vw;
+                font-size: 4em;
+            }
+    
+            p {
+                grid-column: 1;
+                grid-row: 2;
+                width: 50vw;
+                font-size: 1.5em;
+                left: 10%;
+                top: 0;
+            }
+    
+            #wkEnds {
+                position: relative;
+                top: 4vh;
+            }
+    
+            #patio {
+                position: relative;
+                top: 8vh;
+            }
+    
+            
+            #hrsImg {
+                display: inline-block;
+                grid-column: 2;
+                grid-row: 1 / 3;
+                width: 50vw;
+                height: 20vh;
+                object-fit: cover;
+                z-index: 2;
+            }
+        }
+    
+        #hmLoc {
+    
+            h1 {
+                font-size: 4em;
+            }
+        }
+    
+        #hmCon {
+            
+            h1 {
+                font-size: 4em;
+            }
+    
+            p {
+                font-size: 1.9em;
+            }
+    
+            a {
+                font-size: 1.2em;
+            }
+    
+            .phoneLink {
+                pointer-events: none;
+            }
+    
+            #socialContact {
+                
+                a img {
+                    width: 30px;
+                    padding: 1%;
+                }
+            }
+        }
+    
+        #hmImg {
+    
+            h1 {
+                font-size: 4em;
+            }
+    
+            #vidIntro, #imgIntro {
+                font-size: 1.9em;
+            }  
+    
+            #imgGallery {
+                padding-bottom: 5%;
+            }
+        }
+    }
+
+    footer {
+
+        #privPol{
+            font-size: 1.9em;
+        }
+
+        #cpyRit {
+            font-size: 1.4em;
+        }
+
+        .topBtn {
+
+            .backTopBtn {
+                font-size: 1.5em;
+            }
         }
     }
 }

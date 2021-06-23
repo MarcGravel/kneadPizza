@@ -84,7 +84,7 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
   box-shadow: 0 4px 4px -2px rgba(73, 73, 73, 0.767);
 }
 
@@ -180,8 +180,8 @@ body {
   text-align: center;
   display: inline-block;
   position: relative;
-  top: 21vh;
-  left: 23vw;
+  top: 27vh;
+  left: 26vw;
 }
 
 #smScrnOverlay #overMenu li {
@@ -243,10 +243,11 @@ footer #privPol, footer #cpyRit {
 footer #privPol {
   width: 50vw;
   grid-row: 2;
+  bottom: 1vh;
 }
 
 footer #cpyRit {
-  font-size: 0.9em;
+  font-size: 0.8em;
   grid-row: 3;
   width: 80vw;
 }
@@ -265,43 +266,163 @@ footer .topBtn .backTopBtn {
 }
 
 @media only screen and (min-width: 600px) {
-  /*Makes phone number none clickable*/
-  .phoneLink {
+  #topNav {
+    /*Hamburger sizing and animation adjustment*/
+    /*Screen Overlay postion adjustment and button sizing*/
+  }
+  #topNav #logoLink #logo {
+    width: 90px;
+  }
+  #topNav #hamburger {
+    width: 80px;
+    height: 12px;
+  }
+  #topNav #hamburger::before, #topNav #hamburger::after {
+    width: 80px;
+    height: 12px;
+    position: relative;
+  }
+  #topNav #hamburger:before {
+    top: -22px;
+  }
+  #topNav #hamburger:after {
+    top: 10px;
+  }
+  #topNav #toggle:checked ~ label::before {
+    transform: rotate(36deg);
+  }
+  #topNav #toggle:checked ~ label::after {
+    transform: rotate(-36deg);
+  }
+  #topNav #overMenu {
+    top: 20vh;
+    left: 28vw;
+  }
+  #topNav #overMenu li {
+    margin: 100px 0px;
+  }
+  #topNav #overMenu li a {
+    font-size: 4.5em;
+    padding: 70px;
+    /*after create white elements to act as hover buttons for a tags*/
+  }
+  #topNav #overMenu li a::after {
+    height: 80px;
+  }
+  #phoneBox {
+    height: 5vh;
+    /*Makes phone number none clickable*/
+  }
+  #phoneBox .phoneLink {
     pointer-events: none;
+    font-size: 1.6em;
   }
-  h1 {
-    font-size: 3.5em;
+  main {
+    position: relative;
+    top: 15vh;
+    /*adjusts anchor points for scrollable buttons as top nav size has changed*/
   }
-  #hmHrs {
+  main .anchorHidden {
+    position: relative;
+    bottom: 15vh;
+    width: 10vw;
+  }
+  main #mainMenu #socialIcons a img {
+    width: 40px;
+    margin-right: 15px;
+  }
+  main #mainMenu h1 {
+    font-size: 4.5em;
+  }
+  main #mainMenu p {
+    font-size: 1.8em;
+  }
+  main #mainMenu #mainBtnsList li a {
+    font-size: 1.6em;
+  }
+  main #mainMenu #mainBtnsList #mainALoc {
+    padding: 2vh 6vw 2vh 6vw;
+  }
+  main #mainMenu #pointDown {
+    height: 15vh;
+  }
+  main #hmHrs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 3fr;
+    /*adjusts positioning of anchor due to grid*/
   }
-  #hmHrs h1 {
+  main #hmHrs #anchorHrs {
+    position: relative;
+    bottom: 34vh;
+  }
+  main #hmHrs h1 {
     grid-column: 1;
     grid-row: 1;
     width: 50vw;
+    font-size: 4em;
   }
-  #hmHrs p {
+  main #hmHrs p {
     grid-column: 1;
     grid-row: 2;
-    width: 40vw;
+    width: 50vw;
+    font-size: 1.5em;
+    left: 10%;
+    top: 0;
   }
-  #hmHrs #wkEnds {
+  main #hmHrs #wkEnds {
     position: relative;
-    top: 5vh;
+    top: 4vh;
   }
-  #hmHrs #patio {
+  main #hmHrs #patio {
     position: relative;
-    top: 9vh;
+    top: 8vh;
   }
-  #hmHrs #hrsImg {
+  main #hmHrs #hrsImg {
     display: inline-block;
     grid-column: 2;
     grid-row: 1 / 3;
     width: 50vw;
     height: 20vh;
     object-fit: cover;
+    z-index: 2;
+  }
+  main #hmLoc h1 {
+    font-size: 4em;
+  }
+  main #hmCon h1 {
+    font-size: 4em;
+  }
+  main #hmCon p {
+    font-size: 1.9em;
+  }
+  main #hmCon a {
+    font-size: 1.2em;
+  }
+  main #hmCon .phoneLink {
+    pointer-events: none;
+  }
+  main #hmCon #socialContact a img {
+    width: 30px;
+    padding: 1%;
+  }
+  main #hmImg h1 {
+    font-size: 4em;
+  }
+  main #hmImg #vidIntro, main #hmImg #imgIntro {
+    font-size: 1.9em;
+  }
+  main #hmImg #imgGallery {
+    padding-bottom: 5%;
+  }
+  footer #privPol {
+    font-size: 1.9em;
+  }
+  footer #cpyRit {
+    font-size: 1.4em;
+  }
+  footer .topBtn .backTopBtn {
+    font-size: 1.5em;
   }
 }
 
