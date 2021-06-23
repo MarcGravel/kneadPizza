@@ -39,6 +39,41 @@ body {
   box-shadow: 0 4px 4px -2px rgba(73, 73, 73, 0.767);
 }
 
+@keyframes shakeLogo {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  20% {
+    transform: translate(-1px, -2px) rotate(1deg);
+  }
+  40% {
+    transform: translate(-2px, -1px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(2px, 1px) rotate(2deg);
+  }
+  80% {
+    transform: translate(-2px, -2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, 2px) rotate(-1deg);
+  }
+}
+
+#logoLink {
+  grid-column: 1;
+  justify-self: center;
+  align-self: center;
+}
+
+#logoLink #logo {
+  width: 70px;
+}
+
+#logoLink:hover {
+  animation: shakeLogo 0.3s;
+}
+
 /*phone number div*/
 #phoneBox {
   background-color: rgba(37, 37, 37, 0.863);
@@ -57,6 +92,137 @@ body {
   text-decoration: none;
 }
 
+/*creates line for hamgburger, is the label for the toggle checkbox*/
+#hamburger {
+  width: 50px;
+  height: 8px;
+  grid-column: 7;
+  justify-self: start;
+  align-self: center;
+  border-top: 8px transparent;
+  border-bottom: 8px transparent;
+  border-radius: 15px;
+  background-color: #dadada;
+  cursor: pointer;
+  z-index: 5;
+  /*creates top and bottom line for hamburger. also creates transition animation*/
+  /*sets position and animation origin*/
+  /*sets position and animation origin*/
+}
+
+#hamburger::before, #hamburger::after {
+  content: '';
+  width: 50px;
+  height: 8px;
+  background-color: #dadada;
+  border-radius: 9px;
+  grid-column: 7;
+  display: block;
+  position: relative;
+  transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+#hamburger::before {
+  top: -16px;
+  transform-origin: left top;
+}
+
+#hamburger::after {
+  top: 8px;
+  transform-origin: left bottom;
+}
+
+/*hides real checkbox*/
+#toggle {
+  visibility: hidden;
+}
+
+/*sets top color and roation position on click*/
+#toggle:checked ~ label::before {
+  background-color: #aa2323;
+  transform: rotate(43deg);
+}
+
+/*sets bottom color and roation position on click*/
+#toggle:checked ~ label::after {
+  background-color: #aa2323;
+  transform: rotate(-43deg);
+}
+
+/*hides center bar on click*/
+#toggle:checked ~ label {
+  background-color: transparent;
+}
+
+/*Delays center bar (label) animation to match rest of*/
+#toggle ~ label {
+  transition: all 0.6s cubic-bezier(1, 0, 0, 1);
+}
+
+/**********Overlay Menu styling below************/
+/*sets position, size, and gradient of overlay*/
+#smScrnOverlay {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  border-bottom-left-radius: 50%;
+  background-image: linear-gradient(to right top, #aaa9a9, #7e8081, #6a6b6b, #2c2c2c, #000000);
+  /*animation from top corner on click*/
+  transform: scale(0);
+  transform-origin: top right;
+  transition: all 0.6s ease-out;
+  z-index: 3;
+  /*aligns list in overlay*/
+}
+
+#smScrnOverlay #overMenu {
+  list-style: none;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 21vh;
+  left: 23vw;
+}
+
+#smScrnOverlay #overMenu li {
+  margin: 50px 0px;
+}
+
+#smScrnOverlay #overMenu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 500;
+  padding: 30px;
+  /*this position sets sizing for button bars in the :after*/
+  position: relative;
+  /*after create white elements to act as hover buttons for a tags*/
+  /*button press*/
+}
+
+#smScrnOverlay #overMenu li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: transparent;
+  border-radius: 50px;
+  box-shadow: 1px 4px rgba(255, 250, 250, 0.514);
+  z-index: -1;
+}
+
+#smScrnOverlay #overMenu li a:active:after {
+  background-image: linear-gradient(to left bottom, #313131, #3e3e3f, #575a5a, #656867, #868685);
+  box-shadow: none;
+  transition: all 0.3s ease-out;
+}
+
+/*Make menu appear on hamburger click*/
+#toggle:checked ~ #smScrnOverlay {
+  transform: scale(1);
+}
+
 footer {
   position: relative;
   top: 13vh;
@@ -65,6 +231,8 @@ footer {
   background-color: #4b4a4a;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
+  /*Sets position of footer elements*/
+  /*Sets top of page button*/
 }
 
 footer #privPol, footer #cpyRit {
@@ -85,253 +253,55 @@ footer #cpyRit {
 
 footer .topBtn {
   position: relative;
-  left: 70vw;
+  left: 65vw;
   top: 5vh;
+  width: 35vw;
 }
 
 footer .topBtn .backTopBtn {
   text-decoration: none;
   border: 3px #dadada solid;
-  padding: 10px;
-}
-
-@media only screen and (max-width: 599px) {
-  /*creates line for hamgburger, is the label for the toggle checkbox*/
-  #hamburger {
-    width: 50px;
-    height: 8px;
-    grid-column: 7;
-    justify-self: start;
-    align-self: center;
-    border-top: 8px transparent;
-    border-bottom: 8px transparent;
-    border-radius: 15px;
-    background-color: #dadada;
-    cursor: pointer;
-    z-index: 5;
-    /*creates top and bottom line for hamburger. also creates transition animation*/
-    /*sets position and animation origin*/
-    /*sets position and animation origin*/
-  }
-  #hamburger::before, #hamburger::after {
-    content: '';
-    width: 50px;
-    height: 8px;
-    background-color: #dadada;
-    border-radius: 9px;
-    grid-column: 7;
-    display: block;
-    position: relative;
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
-  }
-  #hamburger::before {
-    top: -16px;
-    transform-origin: left top;
-  }
-  #hamburger::after {
-    top: 8px;
-    transform-origin: left bottom;
-  }
-  /*hides real checkbox*/
-  #toggle {
-    visibility: hidden;
-  }
-  /*sets top color and roation position on click*/
-  #toggle:checked ~ label::before {
-    background-color: #aa2323;
-    transform: rotate(43deg);
-  }
-  /*sets bottom color and roation position on click*/
-  #toggle:checked ~ label::after {
-    background-color: #aa2323;
-    transform: rotate(-43deg);
-  }
-  /*hides center bar on click*/
-  #toggle:checked ~ label {
-    background-color: transparent;
-  }
-  /*Delays center bar (label) animation to match rest of*/
-  #toggle ~ label {
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
-  }
-  /**********Overlay Menu styling below************/
-  /*sets position, size, and gradient of overlay*/
-  #smScrnOverlay {
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    border-bottom-left-radius: 50%;
-    background-image: linear-gradient(to right top, #d6d2d2, #8c8e8f, #747575, #2c2c2c, #000000);
-    /*animation from top corner on click*/
-    transform: scale(0);
-    transform-origin: top right;
-    transition: all 0.6s ease-out;
-    z-index: 3;
-    /*aligns list in overlay*/
-  }
-  #smScrnOverlay #overMenu {
-    list-style: none;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    top: 21vh;
-    left: 23vw;
-  }
-  #smScrnOverlay #overMenu li {
-    margin: 50px 0px;
-  }
-  #smScrnOverlay #overMenu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 2.5em;
-    font-weight: 500;
-    padding: 30px;
-    /*this position sets sizing for button bars in the :after*/
-    position: relative;
-    /*after create white elements to act as hover buttons for a tags*/
-    /*button press*/
-  }
-  #smScrnOverlay #overMenu li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background: transparent;
-    border-radius: 50px;
-    box-shadow: 1px 4px rgba(255, 250, 250, 0.514);
-    z-index: -1;
-  }
-  #smScrnOverlay #overMenu li a:active:after {
-    background-image: linear-gradient(to left bottom, #313131, #3e3e3f, #575a5a, #656867, #868685);
-    box-shadow: none;
-    transition: all 0.3s ease-out;
-  }
-  /*Make menu appear on hamburger click*/
-  #toggle:checked ~ #smScrnOverlay {
-    transform: scale(1);
-  }
+  padding: 8px;
 }
 
 @media only screen and (min-width: 600px) {
-  /*creates line for hamgburger, is the label for the toggle checkbox*/
-  #hamburger {
-    width: 50px;
-    height: 8px;
-    grid-column: 7;
-    justify-self: start;
-    align-self: center;
-    border-top: 8px transparent;
-    border-bottom: 8px transparent;
-    border-radius: 15px;
-    background-color: #dadada;
-    cursor: pointer;
-    z-index: 5;
-    /*creates top and bottom line for hamburger. also creates transition animation*/
-    /*sets position and animation origin*/
-    /*sets position and animation origin*/
-  }
-  #hamburger::before, #hamburger::after {
-    content: '';
-    width: 50px;
-    height: 8px;
-    background-color: #dadada;
-    border-radius: 9px;
-    grid-column: 7;
-    display: block;
-    position: relative;
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
-  }
-  #hamburger::before {
-    top: -16px;
-    transform-origin: left top;
-  }
-  #hamburger::after {
-    top: 8px;
-    transform-origin: left bottom;
-  }
-  /*hides real checkbox*/
-  #toggle {
-    visibility: hidden;
-  }
-  /*sets top color and roation position on click*/
-  #toggle:checked ~ label::before {
-    background-color: #aa2323;
-    transform: rotate(43deg);
-  }
-  /*sets bottom color and roation position on click*/
-  #toggle:checked ~ label::after {
-    background-color: #aa2323;
-    transform: rotate(-43deg);
-  }
-  /*hides center bar on click*/
-  #toggle:checked ~ label {
-    background-color: transparent;
-  }
-  /*Delays center bar (label) animation to match rest of*/
-  #toggle ~ label {
-    transition: all 0.6s cubic-bezier(1, 0, 0, 1);
-  }
-  /**********Overlay Menu styling below************/
-  /*sets position, size, and gradient of overlay*/
-  #smScrnOverlay {
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    border-bottom-left-radius: 50%;
-    background-image: linear-gradient(to right top, #d6d2d2, #8c8e8f, #747575, #2c2c2c, #000000);
-    /*animation from top corner on click*/
-    transform: scale(0);
-    transform-origin: top right;
-    transition: all 0.6s ease-out;
-    z-index: 3;
-    /*aligns list in overlay*/
-  }
-  #smScrnOverlay #overMenu {
-    list-style: none;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    top: 21vh;
-    left: 23vw;
-  }
-  #smScrnOverlay #overMenu li {
-    margin: 50px 0px;
-  }
-  #smScrnOverlay #overMenu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 2.5em;
-    font-weight: 500;
-    padding: 30px;
-    /*this position sets sizing for button bars in the :after*/
-    position: relative;
-    /*after create white elements to act as hover buttons for a tags*/
-    /*button press*/
-  }
-  #smScrnOverlay #overMenu li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background: transparent;
-    border-radius: 50px;
-    box-shadow: 1px 4px rgba(255, 250, 250, 0.514);
-    z-index: -1;
-  }
-  #smScrnOverlay #overMenu li a:active:after {
-    background-image: linear-gradient(to left bottom, #313131, #3e3e3f, #575a5a, #656867, #868685);
-    box-shadow: none;
-    transition: all 0.3s ease-out;
-  }
-  /*Make menu appear on hamburger click*/
-  #toggle:checked ~ #smScrnOverlay {
-    transform: scale(1);
-  }
   /*Makes phone number none clickable*/
   .phoneLink {
     pointer-events: none;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  #hmHrs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+  }
+  #hmHrs h1 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 50vw;
+  }
+  #hmHrs p {
+    grid-column: 1;
+    grid-row: 2;
+    width: 40vw;
+  }
+  #hmHrs #wkEnds {
+    position: relative;
+    top: 5vh;
+  }
+  #hmHrs #patio {
+    position: relative;
+    top: 9vh;
+  }
+  #hmHrs #hrsImg {
+    display: inline-block;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    width: 50vw;
+    height: 20vh;
+    object-fit: cover;
   }
 }
 

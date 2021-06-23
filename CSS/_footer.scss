@@ -7,6 +7,7 @@ footer {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 
+    /*Sets position of footer elements*/
     #privPol, #cpyRit {
         position: relative;
         left: 5vw;
@@ -24,15 +25,17 @@ footer {
         width: 80vw;
     }
 
+    /*Sets top of page button*/
     .topBtn {
         position: relative;
-        left: 70vw;
+        left: 65vw;
         top: 5vh;
+        width: 35vw;
 
         .backTopBtn {
             text-decoration: none;
             border: 3px #dadada solid;
-            padding: 10px;
+            padding: 8px;
         }
     }
 }

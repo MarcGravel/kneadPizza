@@ -156,6 +156,11 @@ main {
         margin-top: 0.5vh;
         width: 80vw;
     }
+
+    /*Tablet and desktop only*/
+    #hrsImg {
+        display: none;
+    }
 }
 
 /*Location div*/
@@ -282,7 +287,8 @@ main {
         align-self: center;
         text-decoration: underline;
     }
-
+    
+    /*sets positioning and grid of img gallery*/
     #imgGallery {
 
         grid-row: 5;
@@ -295,11 +301,11 @@ main {
         .galImgs {
             height: 40vw;
             width: 40vw;
+            border: 5px black solid;
             max-width: 400px;
             max-height: 400px;
             /*object fit ensures the photos are all square*/
             object-fit: cover;
-            border: 5px black solid;
         }
 
         .groupOne {

@@ -40,6 +40,7 @@ the image is the same. gives the illusion of continuous infinit loop*/
   }
 }
 
+/*Carousel positioning*/
 #imgCarousel {
   background-color: rgba(80, 80, 80, 0.473);
   overflow: hidden;
@@ -70,6 +71,7 @@ the image is the same. gives the illusion of continuous infinit loop*/
   border-radius: 20px;
 }
 
+/*styling for the main content of about us*/
 #aboutUsArticle {
   background-color: rgba(41, 41, 41, 0.658);
 }
