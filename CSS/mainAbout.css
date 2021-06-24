@@ -1,8 +1,12 @@
-main {
+body {
+  overflow-x: hidden;
+}
+
+#mainAbout {
   position: relative;
   top: 13vh;
   display: grid;
-  grid-template-rows: 46vh 125vh;
+  grid-template-rows: 46vh 140vh;
 }
 
 /*animation for imgCarousel. doubling values at 
@@ -76,11 +80,32 @@ the image is the same. gives the illusion of continuous infinit loop*/
   background-color: rgba(41, 41, 41, 0.658);
 }
 
+#aboutUsArticle #kneadLogoAbout {
+  display: none;
+}
+
+#aboutUsArticle #chefKnead {
+  display: none;
+}
+
+#aboutUsArticle #chefContainer {
+  display: none;
+}
+
 #aboutUsArticle h1, #aboutUsArticle p {
   position: relative;
   top: 1vh;
   padding-left: 3vw;
   padding-right: 3vw;
   margin-bottom: 4vh;
+}
+
+#aboutUsArticle #logoContainer {
+  display: grid;
+  justify-items: center;
+}
+
+#aboutUsArticle #logoContainer #kneadLogoBtmPge {
+  width: 150px;
 }
 /*# sourceMappingURL=mainAbout.css.map */

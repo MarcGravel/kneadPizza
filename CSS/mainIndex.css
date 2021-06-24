@@ -1,4 +1,8 @@
-main {
+body {
+  overflow-x: hidden;
+}
+
+#mainHomePage {
   position: relative;
   top: 13vh;
   display: grid;
@@ -278,8 +282,6 @@ main {
   width: 95vw;
   justify-self: center;
   max-width: 560px;
-  position: relative;
-  top: 5vh;
 }
 
 #hmImg #imgIntro {

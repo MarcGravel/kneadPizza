@@ -1,4 +1,8 @@
-main {
+body {
+  overflow-x: hidden;
+}
+
+#mainMenuPage {
   position: relative;
   top: 13vh;
   display: grid;
@@ -22,6 +26,10 @@ main {
   position: relative;
   left: 60vw;
   top: 10vw;
+}
+
+.topBtn {
+  width: 100%;
 }
 
 /*main top div*/
@@ -145,13 +153,25 @@ section h3 {
   grid-row: 2;
 }
 
+#drinks .menuItemsImg {
+  display: none;
+}
+
 #food {
   background: #1b1b1b;
   grid-row: 3;
 }
 
-#deserts {
+#food .menuItemsImg {
+  display: none;
+}
+
+#desserts {
   background: #3f3f3f;
   grid-row: 4;
+}
+
+#desserts .menuItemsImg {
+  display: none;
 }
 /*# sourceMappingURL=mainMenu.css.map */

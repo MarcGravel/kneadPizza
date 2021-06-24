@@ -1,5 +1,6 @@
 @media only screen and (min-width: 600px) {
 
+    /***********CSS for Header***********/
     #topNav {
 
         #logoLink {
@@ -69,7 +70,8 @@
 
     }
 
-    main {
+    /***********CSS for index.html***********/
+    #mainHomePage {
         position: relative;
         top: 15vh;
 
@@ -80,6 +82,7 @@
             width: 10vw;
         }
 
+        /*Changing size and postion of fonts and elements on main menu area*/
         #mainMenu {
 
             #socialIcons {
@@ -103,9 +106,21 @@
                 li a {
                     font-size: 1.6em;
                 }
+                
+                #mainAHrs {
+                    padding: 2vh 17vw 2vh 17vw;
+                }
+
+                #mainARes {
+                    padding: 2vh 13vw 2vh 13vw;
+                }
+
+                #mainAMen {
+                    padding: 2vh 12vw 2vh 12vw;
+                }
 
                 #mainALoc {
-                    padding: 2vh 6vw 2vh 6vw;
+                    padding: 2vh 8vw 2vh 8vw;
                 }
             }
 
@@ -114,6 +129,7 @@
             }
         }
     
+        /*Adjust position and size of hours area. adds a photo into the empty space*/
         #hmHrs {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -151,7 +167,7 @@
                 top: 8vh;
             }
     
-            
+            /*Photo added here*/
             #hrsImg {
                 display: inline-block;
                 grid-column: 2;
@@ -170,6 +186,7 @@
             }
         }
     
+        /*Changes font size of contact area. Also disallows phone number to be clickable*/
         #hmCon {
             
             h1 {
@@ -197,6 +214,7 @@
             }
         }
     
+        /*Adjust size and position of image container elements*/
         #hmImg {
     
             h1 {
@@ -206,6 +224,11 @@
             #vidIntro, #imgIntro {
                 font-size: 1.9em;
             }  
+
+            #pizzaVid{
+                position: relative;
+                top: 5vh;
+            }
     
             #imgGallery {
                 padding-bottom: 5%;
@@ -213,6 +236,225 @@
         }
     }
 
+    /***********CSS for menu.html***********/
+    
+    /*Adjusts position and sizing of elements throughout menu page*/
+    #mainMenuPage {
+        position: relative;
+        top: 15vh;
+        grid-template-rows: 70vh 195vh 295vh 65vh;
+
+        #mainMenu{
+
+            #socialIcons {
+        
+                a img {
+                    width: 40px;
+                    margin-right: 15px;
+                }
+            }
+
+            h1 {
+                font-size: 4.5em;
+            }
+        
+            p {
+                font-size: 1.8em;
+            }
+            
+            #mainBtnsList {
+
+                li a {
+                    font-size: 1.6em;
+                }
+
+                #mainADrinks {
+                    padding: 2vh 14vw 2vh 14vw;
+                }
+
+                #mainAFood {
+                    padding: 2vh 13vw 2vh 13vw;
+                }
+
+                #mainADeserts {
+                    padding: 2vh 8vw 2vh 8vw;
+                }
+            }
+        }
+
+        section {
+            
+            h1 {
+                font-size: 4em;
+            }
+
+            h3 {
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+
+        }
+
+        /*Sets cocktail image size and visibility*/
+        #drinks {
+
+            /*Adds padding to Vino h1 tag so it does not reposition from floating image*/
+            #vinoTag{
+                padding-top: 4vh;
+            }
+
+            .menuItemsImg {
+                display: block;
+                width: 220px;
+                margin: 1vh 5vw 1vh 3vw;
+                border-radius: 30px;
+                float: left;
+            }
+
+            /*Sets a larger margin so text does not wrap underneath*/
+            #wineImg {
+                float: right;
+                width: 260px;
+                margin-top: 3vh;
+            }
+
+            #teaImg {
+                width: 280px;
+                margin-bottom: 4vh;
+            }
+
+            /*Resets position of back to top button in drinks list*/    
+            #drinksTop {
+                position: relative;
+                left: 30vw;
+            }
+
+        }
+
+        #food {
+
+            .menuItemsImg {
+                display: block;
+                width: 220px;
+                margin: 1vh 5vw 1vh 3vw;
+                border-radius: 30px;
+                float: right;
+            }
+
+            #appieImg{
+                width: 300px
+            }
+
+            #pizzaMenuImgOne {
+                width: 350px;
+                margin-bottom: 1vh;
+                float: left;
+            }
+
+            #pizzaMenuImgTwo {
+                width: 350px;
+                margin-bottom: 1vh;
+            }
+
+            #pastaMenuImg {
+                width: 350px;
+                margin-bottom: 1vh;
+                float: left;
+            }
+
+            #entreeImg {
+                width: 300px;
+                margin-bottom: 5vh;
+            }
+            
+            #foodTop {
+                position: relative;
+                top: 5vh;
+                left: 75vw;
+            }
+        }
+
+        #desserts {
+
+            .menuItemsImg {
+                display: block;
+                width: 300px;
+                margin: 1vh 5vw 4vh 3vw;
+                border-radius: 30px;
+                float: left;
+            }
+
+            #dessertsTop {
+                position: relative;
+                top: 5vh;
+                left: 75vw;
+            }
+        }
+
+    }
+
+    /***********CSS for about.html***********/
+    
+    #mainAbout {
+        position: relative;
+        top: 15vh;
+        grid-template-rows: 72vh 220vh;
+
+        #kneadLogoBtmPge {
+            display: none;
+        }
+
+        #aboutUsArticle {
+            overflow-y: scroll;
+            
+            #kneadLogoAbout {
+                display: block;
+                width: 220px;
+                padding: 0 3vw 0 3vw;
+                /*wraps image around text*/
+                float: left;
+            }
+
+            #chefKnead {
+                display: block;
+                width: 400px;
+                padding: 2vh 3vw 2vh 3vw;
+                float: right;
+            }
+
+            #chefContainer {
+                width: 100%;
+                height: 50vh;
+                display: grid;
+                grid-template-rows: 50% 50%;
+                grid-template-columns: 50% 50%;
+                justify-items: center;
+
+                .chefPizza {
+                    width: 40vw;
+                }
+                
+                .pizImgleft {
+                    padding: 2vh 0 0 2vw;
+                }
+                
+            }
+
+            h1 {
+                font-size: 4em;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.9em;
+            }
+        }
+    }
+
+    /***********CSS for Footer***********/
     footer {
 
         #privPol{
