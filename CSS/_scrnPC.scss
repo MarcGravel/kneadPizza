@@ -1,12 +1,56 @@
 @media only screen and (min-width: 1100px) {
 
-    /*hides mobile+tablet checkbox*/
-    #toggle, #hamburger {
-        display: none;
+    /***********CSS for Header***********/
+    #topNav{
+        /*hides mobile+tablet checkbox*/
+        #toggle, #hamburger {
+            display: none;
+        }
+
+        #logoLink {
+            position: relative;
+            right: 5vw;
+
+            #logo {
+                width: 100px;
+            }
+        }
+
+        /*styling for this is in _header.scss*/
+        #headerNavBtns {
+            display: inline-block;
+            
+        }
+
+        /*Makes phone number none clickable*/
+        .phoneLink {
+            pointer-events: none;
+        }
     }
 
-    /*Makes phone number none clickable*/
-    .phoneLink {
-        pointer-events: none;
+    /***********CSS for index.html***********/
+
+    #mainHomePage {
+
+        #mainMenu {
+
+            #socialIcons {
+        
+                a img {
+                    width: 50px;
+                    margin-right: 35px;
+                }
+            }
+
+            h1 {
+                font-size: 5.5em;
+                bottom: 3vh;
+            }
+        
+            p {
+                font-size: 2.8em;
+                bottom: 3vh;
+            }
+        }
     }
 }

@@ -35,7 +35,7 @@ body {
   height: 10vh;
   display: grid;
   z-index: 10;
-  grid-template-columns: 7fr 10fr repeat(4, 2fr) 3fr 3fr;
+  grid-template-columns: 7fr 8fr repeat(5, 2fr) 3fr 3fr;
   box-shadow: 0 4px 4px -2px rgba(73, 73, 73, 0.767);
 }
 
@@ -74,6 +74,41 @@ body {
   animation: shakeLogo 0.3s;
 }
 
+/*Only visible on desktop. sets nav bar navigation buttons*/
+#headerNavBtns {
+  display: none;
+  overflow: hidden;
+  grid-column: 3 / 10;
+  align-self: center;
+  justify-self: center;
+}
+
+#headerNavBtns #navBtnList .navBtns {
+  display: inline;
+  list-style: none;
+  padding: 2vh 0 2vh 0;
+  margin-left: 1vw;
+  text-align: center;
+  border: 2px #dadada solid;
+}
+
+#headerNavBtns #navBtnList .navBtns:hover {
+  background-color: #474747;
+}
+
+#headerNavBtns #navBtnList .navBtns a {
+  text-decoration: none;
+  font-size: 1.6em;
+}
+
+#headerNavBtns #navBtnList .navBtns #homeNavBtn, #headerNavBtns #navBtnList .navBtns #menuNavBtn {
+  padding: 1.2vh 4vw 2vh 4vw;
+}
+
+#headerNavBtns #navBtnList .navBtns #aboutNavBtn {
+  padding: 1.2vh 3vw 2vh 3vw;
+}
+
 /*phone number div*/
 #phoneBox {
   background-color: rgba(37, 37, 37, 0.863);
@@ -96,7 +131,7 @@ body {
 #hamburger {
   width: 50px;
   height: 8px;
-  grid-column: 7;
+  grid-column: 8;
   justify-self: start;
   align-self: center;
   border-top: 8px transparent;
@@ -341,31 +376,23 @@ footer .topBtn .backTopBtn {
     font-size: 4.5em;
   }
   #mainHomePage #mainMenu p {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   #mainHomePage #mainMenu #mainBtnsList li a {
     font-size: 1.6em;
   }
-  #mainHomePage #mainMenu #mainBtnsList #mainAHrs {
-    padding: 2vh 17vw 2vh 17vw;
-  }
-  #mainHomePage #mainMenu #mainBtnsList #mainARes {
-    padding: 2vh 13vw 2vh 13vw;
-  }
-  #mainHomePage #mainMenu #mainBtnsList #mainAMen {
-    padding: 2vh 12vw 2vh 12vw;
-  }
-  #mainHomePage #mainMenu #mainBtnsList #mainALoc {
-    padding: 2vh 8vw 2vh 8vw;
-  }
   #mainHomePage #mainMenu #pointDown {
     height: 15vh;
+    bottom: 2vh;
   }
   #mainHomePage #hmHrs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 1fr 2fr;
+    height: 25vh;
+    padding-bottom: 0;
     /*adjusts positioning of anchor due to grid*/
+    /*Adjusts the p position more centered once screen gets wider before PC bump*/
     /*Photo added here*/
   }
   #mainHomePage #hmHrs #anchorHrs {
@@ -376,16 +403,26 @@ footer .topBtn .backTopBtn {
     grid-column: 1;
     grid-row: 1;
     width: 50vw;
+    bottom: 0;
     font-size: 4em;
   }
   #mainHomePage #hmHrs p {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 2 / 3;
     width: 50vw;
     font-size: 1.5em;
-    left: 10%;
-    top: 0;
+    left: 3vw;
+    bottom: 0;
   }
+}
+
+@media only screen and (min-width: 600px) and (min-width: 900px) {
+  #mainHomePage #hmHrs p {
+    left: 10vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   #mainHomePage #hmHrs #wkEnds {
     position: relative;
     top: 4vh;
@@ -399,28 +436,30 @@ footer .topBtn .backTopBtn {
     grid-column: 2;
     grid-row: 1 / 3;
     width: 50vw;
-    height: 20vh;
+    height: 25vh;
     object-fit: cover;
     z-index: 2;
   }
   #mainHomePage #hmLoc h1 {
     font-size: 4em;
   }
+  #mainHomePage #hmLoc #googleMap {
+    height: 60vh;
+  }
   #mainHomePage #hmCon h1 {
     font-size: 4em;
   }
   #mainHomePage #hmCon p {
-    font-size: 1.9em;
+    font-size: 2em;
   }
   #mainHomePage #hmCon a {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
   #mainHomePage #hmCon .phoneLink {
     pointer-events: none;
   }
   #mainHomePage #hmCon #socialContact a img {
-    width: 30px;
-    padding: 1%;
+    width: 40px;
   }
   #mainHomePage #hmImg h1 {
     font-size: 4em;
@@ -428,20 +467,27 @@ footer .topBtn .backTopBtn {
   #mainHomePage #hmImg #vidIntro, #mainHomePage #hmImg #imgIntro {
     font-size: 1.9em;
   }
-  #mainHomePage #hmImg #pizzaVid {
-    position: relative;
-    top: 5vh;
-  }
+}
+
+@media only screen and (min-width: 600px) and (min-width: 750px) {
   #mainHomePage #hmImg #imgGallery {
-    padding-bottom: 5%;
+    grid-template-columns: repeat(3, 1fr);
   }
+  #mainHomePage #hmImg #imgGallery .galImgs {
+    height: 25vw;
+    width: 25vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   /***********CSS for menu.html***********/
   /*Adjusts position and sizing of elements throughout menu page*/
   #mainMenuPage {
-    position: relative;
     top: 15vh;
-    grid-template-rows: 70vh 195vh 295vh 65vh;
     /*Sets cocktail image size and visibility*/
+  }
+  #mainMenuPage #mainMenu {
+    padding-bottom: 0;
   }
   #mainMenuPage #mainMenu #socialIcons a img {
     width: 40px;
@@ -451,19 +497,10 @@ footer .topBtn .backTopBtn {
     font-size: 4.5em;
   }
   #mainMenuPage #mainMenu p {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   #mainMenuPage #mainMenu #mainBtnsList li a {
     font-size: 1.6em;
-  }
-  #mainMenuPage #mainMenu #mainBtnsList #mainADrinks {
-    padding: 2vh 14vw 2vh 14vw;
-  }
-  #mainMenuPage #mainMenu #mainBtnsList #mainAFood {
-    padding: 2vh 13vw 2vh 13vw;
-  }
-  #mainMenuPage #mainMenu #mainBtnsList #mainADeserts {
-    padding: 2vh 8vw 2vh 8vw;
   }
   #mainMenuPage section h1 {
     font-size: 4em;
@@ -500,7 +537,7 @@ footer .topBtn .backTopBtn {
   }
   #mainMenuPage #drinks #drinksTop {
     position: relative;
-    left: 30vw;
+    left: 10vw;
   }
   #mainMenuPage #food .menuItemsImg {
     display: block;
@@ -532,8 +569,7 @@ footer .topBtn .backTopBtn {
   }
   #mainMenuPage #food #foodTop {
     position: relative;
-    top: 5vh;
-    left: 75vw;
+    left: 10vw;
   }
   #mainMenuPage #desserts .menuItemsImg {
     display: block;
@@ -544,20 +580,19 @@ footer .topBtn .backTopBtn {
   }
   #mainMenuPage #desserts #dessertsTop {
     position: relative;
-    top: 5vh;
-    left: 75vw;
+    left: 10vw;
   }
   /***********CSS for about.html***********/
   #mainAbout {
     position: relative;
     top: 15vh;
-    grid-template-rows: 72vh 220vh;
   }
   #mainAbout #kneadLogoBtmPge {
     display: none;
   }
   #mainAbout #aboutUsArticle {
-    overflow-y: scroll;
+    /*style and position of in article photo*/
+    /*style and position of grid container photos*/
   }
   #mainAbout #aboutUsArticle #kneadLogoAbout {
     display: block;
@@ -569,6 +604,7 @@ footer .topBtn .backTopBtn {
   #mainAbout #aboutUsArticle #chefKnead {
     display: block;
     width: 400px;
+    border-radius: 40px;
     padding: 2vh 3vw 2vh 3vw;
     float: right;
   }
@@ -578,13 +614,40 @@ footer .topBtn .backTopBtn {
     display: grid;
     grid-template-rows: 50% 50%;
     grid-template-columns: 50% 50%;
-    justify-items: center;
+    gap: 20px 20px;
+    /*keeps photos larger with smaller width screen, 
+                width changes at wider screens so images do not overflow*/
   }
   #mainAbout #aboutUsArticle #chefContainer .chefPizza {
     width: 40vw;
+    border-radius: 40px;
   }
-  #mainAbout #aboutUsArticle #chefContainer .pizImgleft {
-    padding: 2vh 0 0 2vw;
+  #mainAbout #aboutUsArticle #chefContainer .pizImgLeft {
+    justify-self: end;
+  }
+  #mainAbout #aboutUsArticle #chefContainer #pizImgTop {
+    align-self: end;
+  }
+  #mainAbout #aboutUsArticle #chefContainer #pizImgBtm {
+    align-self: start;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 870px) {
+  #mainAbout #aboutUsArticle #chefContainer .pizImgLeft {
+    width: 45vw;
+  }
+  #mainAbout #aboutUsArticle #chefContainer .pizImgRight {
+    width: 45vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #mainAbout #aboutUsArticle #chefContainer .pizImgRight {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: start;
   }
   #mainAbout #aboutUsArticle h1 {
     font-size: 4em;
@@ -606,13 +669,40 @@ footer .topBtn .backTopBtn {
 }
 
 @media only screen and (min-width: 1100px) {
-  /*hides mobile+tablet checkbox*/
-  #toggle, #hamburger {
+  /***********CSS for Header***********/
+  #topNav {
+    /*hides mobile+tablet checkbox*/
+    /*styling for this is in _header.scss*/
+    /*Makes phone number none clickable*/
+  }
+  #topNav #toggle, #topNav #hamburger {
     display: none;
   }
-  /*Makes phone number none clickable*/
-  .phoneLink {
+  #topNav #logoLink {
+    position: relative;
+    right: 5vw;
+  }
+  #topNav #logoLink #logo {
+    width: 100px;
+  }
+  #topNav #headerNavBtns {
+    display: inline-block;
+  }
+  #topNav .phoneLink {
     pointer-events: none;
+  }
+  /***********CSS for index.html***********/
+  #mainHomePage #mainMenu #socialIcons a img {
+    width: 50px;
+    margin-right: 35px;
+  }
+  #mainHomePage #mainMenu h1 {
+    font-size: 5.5em;
+    bottom: 3vh;
+  }
+  #mainHomePage #mainMenu p {
+    font-size: 2.8em;
+    bottom: 3vh;
   }
 }
 /*# sourceMappingURL=site.css.map */

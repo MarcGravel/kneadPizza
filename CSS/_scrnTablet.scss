@@ -98,7 +98,7 @@
             }
         
             p {
-                font-size: 1.8em;
+                font-size: 2em;
             }
 
             #mainBtnsList {
@@ -106,26 +106,11 @@
                 li a {
                     font-size: 1.6em;
                 }
-                
-                #mainAHrs {
-                    padding: 2vh 17vw 2vh 17vw;
-                }
-
-                #mainARes {
-                    padding: 2vh 13vw 2vh 13vw;
-                }
-
-                #mainAMen {
-                    padding: 2vh 12vw 2vh 12vw;
-                }
-
-                #mainALoc {
-                    padding: 2vh 8vw 2vh 8vw;
-                }
             }
 
             #pointDown {
                 height: 15vh;
+                bottom: 2vh;
             }
         }
     
@@ -133,7 +118,9 @@
         #hmHrs {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 3fr;
+            grid-template-rows: 1fr 2fr;
+            height: 25vh;
+            padding-bottom: 0;
     
             /*adjusts positioning of anchor due to grid*/
             #anchorHrs {
@@ -145,16 +132,25 @@
                 grid-column: 1;
                 grid-row: 1;
                 width: 50vw;
+                bottom: 0;
                 font-size: 4em;
             }
     
             p {
                 grid-column: 1;
-                grid-row: 2;
+                grid-row: 2 / 3;
                 width: 50vw;
                 font-size: 1.5em;
-                left: 10%;
-                top: 0;
+                left: 3vw;
+                bottom: 0;
+            }
+
+            /*Adjusts the p position more centered once screen gets wider before PC bump*/
+            @media only screen and (min-width: 900px) {
+                   
+                p {
+                    left: 10vw;
+                }
             }
     
             #wkEnds {
@@ -173,7 +169,7 @@
                 grid-column: 2;
                 grid-row: 1 / 3;
                 width: 50vw;
-                height: 20vh;
+                height: 25vh;
                 object-fit: cover;
                 z-index: 2;
             }
@@ -183,6 +179,10 @@
     
             h1 {
                 font-size: 4em;
+            }
+
+            #googleMap {
+                height: 60vh;
             }
         }
     
@@ -194,11 +194,11 @@
             }
     
             p {
-                font-size: 1.9em;
+                font-size: 2em;
             }
     
             a {
-                font-size: 1.2em;
+                font-size: 1.8em;
             }
     
             .phoneLink {
@@ -208,8 +208,7 @@
             #socialContact {
                 
                 a img {
-                    width: 30px;
-                    padding: 1%;
+                    width: 40px;
                 }
             }
         }
@@ -225,14 +224,19 @@
                 font-size: 1.9em;
             }  
 
-            #pizzaVid{
-                position: relative;
-                top: 5vh;
-            }
-    
             #imgGallery {
-                padding-bottom: 5%;
+
+                @media only screen and (min-width: 750px) {
+                    grid-template-columns: repeat(3, 1fr);
+
+                    .galImgs {
+                        height: 25vw;
+                        width: 25vw;
+                    }
+                    
+                }
             }
+
         }
     }
 
@@ -240,11 +244,10 @@
     
     /*Adjusts position and sizing of elements throughout menu page*/
     #mainMenuPage {
-        position: relative;
         top: 15vh;
-        grid-template-rows: 70vh 195vh 295vh 65vh;
 
         #mainMenu{
+            padding-bottom: 0;
 
             #socialIcons {
         
@@ -259,25 +262,13 @@
             }
         
             p {
-                font-size: 1.8em;
+                font-size: 2em;
             }
             
             #mainBtnsList {
 
                 li a {
                     font-size: 1.6em;
-                }
-
-                #mainADrinks {
-                    padding: 2vh 14vw 2vh 14vw;
-                }
-
-                #mainAFood {
-                    padding: 2vh 13vw 2vh 13vw;
-                }
-
-                #mainADeserts {
-                    padding: 2vh 8vw 2vh 8vw;
                 }
             }
         }
@@ -329,9 +320,8 @@
             /*Resets position of back to top button in drinks list*/    
             #drinksTop {
                 position: relative;
-                left: 30vw;
+                left: 10vw;
             }
-
         }
 
         #food {
@@ -372,8 +362,7 @@
             
             #foodTop {
                 position: relative;
-                top: 5vh;
-                left: 75vw;
+                left: 10vw;
             }
         }
 
@@ -389,8 +378,7 @@
 
             #dessertsTop {
                 position: relative;
-                top: 5vh;
-                left: 75vw;
+                left: 10vw;
             }
         }
 
@@ -401,14 +389,12 @@
     #mainAbout {
         position: relative;
         top: 15vh;
-        grid-template-rows: 72vh 220vh;
 
         #kneadLogoBtmPge {
             display: none;
         }
 
         #aboutUsArticle {
-            overflow-y: scroll;
             
             #kneadLogoAbout {
                 display: block;
@@ -418,29 +404,60 @@
                 float: left;
             }
 
+            /*style and position of in article photo*/
             #chefKnead {
                 display: block;
                 width: 400px;
+                border-radius: 40px;
                 padding: 2vh 3vw 2vh 3vw;
                 float: right;
             }
 
+            /*style and position of grid container photos*/
             #chefContainer {
                 width: 100%;
                 height: 50vh;
                 display: grid;
                 grid-template-rows: 50% 50%;
                 grid-template-columns: 50% 50%;
-                justify-items: center;
+                gap: 20px 20px;
 
                 .chefPizza {
                     width: 40vw;
+                    border-radius: 40px;
                 }
-                
-                .pizImgleft {
-                    padding: 2vh 0 0 2vw;
+
+                .pizImgLeft {
+                    justify-self: end;
                 }
-                
+
+                #pizImgTop {
+                    align-self: end;
+                }
+
+                #pizImgBtm {
+                    align-self: start;
+                }
+
+                /*keeps photos larger with smaller width screen, 
+                width changes at wider screens so images do not overflow*/
+                @media only screen and (max-width: 870px) {
+
+                    .pizImgLeft {
+                        width: 45vw;
+                    }
+
+                    .pizImgRight {
+                        width: 45vw;
+                    }
+                }
+
+                .pizImgRight {
+                    grid-column: 2;
+                    grid-row: 1 / 3;
+                    align-self: center;
+                    justify-self: start;
+                }
             }
 
             h1 {

@@ -5,8 +5,6 @@ body{
 #mainMenuPage {
     position: relative;
     top: 13vh;
-    display: grid;
-    grid-template-rows: 70vh 155vh 220vh 55vh;
 }
 
 /*Nav scroll button postion*/
@@ -19,31 +17,33 @@ body{
 }
 
 /*styling and postion of back to top buttons*/
-.backTopBtn {
-    text-decoration: none;
-    border: 3px #dadada solid;
-    padding: 10px;
-    position: relative;
-    left: 60vw;
-    top: 10vw;
-}
-
 .topBtn {
     width: 100%;
+    display: inline-block;
+    position: relative;
+    padding-top: 3vh;
+    left: 62vw;
+
+    .backTopBtn {
+        text-decoration: none;
+        border: 3px #dadada solid;
+        padding: 10px;
+    }
 }
 
 /*main top div*/
 #mainMenu {
-    grid-row: 1;
     width: 100vw;
     text-align: end;
     display: grid;
     background:rgba(34, 34, 34, 0.5);
-    grid-template-rows: 3fr 2fr 2fr 12fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr 4fr;
+    padding-bottom: 5vh;
 
     #socialIcons {
         text-align: start;
         margin: 12px;
+        height: fit-content;
 
         a img {
             width: 25px;
@@ -62,6 +62,7 @@ body{
         margin-left: 20vw;
         position: relative;
         right: 8vw;
+        font-size: 1.3em;
     }
 
     /*Css for links on main menu area*/
@@ -72,50 +73,35 @@ body{
             position: relative;
             right: 8vw;
             margin-top: 3vh;
-            padding: 2vh 0 2vh 0;
             text-align: center;
             list-style: none;
             border: 2px #dadada solid;
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.527);
+            }
         }
 
         li a {
             text-decoration: none;
         }
 
-        #mainLiDrinks {
-            margin-left: 60vw;
+        #mainADrinks, #mainAFood, #mainADesserts {
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            display: block;
         }
 
-        #mainADrinks {
-            padding: 2vh 12vw 2vh 12vw;
-
-            &:active {
-                background-color: rgba(0, 0, 0, 0.527);
-            }
+        #mainLiDrinks {
+            margin-left: 60vw;
         }
 
         #mainLiFood {
             margin-left: 65vw;
         }
 
-        #mainAFood {
-            padding: 2vh 11vw 2vh 11vw;
-
-            &:active {
-                background-color: rgba(0, 0, 0, 0.527);
-            }
-        }
-
-        #mainLiDeserts {
+        #mainLiDesserts {
             margin-left: 70vw;
-        }
-
-        #mainADeserts {
-            padding: 2vh 6vw 2vh 6vw;
-
-            &:active {
-                background-color: rgba(0, 0, 0, 0.527);
-            }
         }
     }
 }
@@ -152,7 +138,7 @@ section {
 /*Position and bg color for main content divs*/
 #drinks {
     background:rgb(63, 63, 63);
-    grid-row: 2;
+    padding-bottom: 5vh;
 
     .menuItemsImg {
         display: none;
@@ -161,7 +147,7 @@ section {
 
 #food {
     background:rgb(27, 27, 27);
-    grid-row: 3;
+    padding-bottom: 5vh;
 
     .menuItemsImg {
         display: none;
@@ -170,7 +156,7 @@ section {
 
 #desserts {
     background:rgb(63, 63, 63);
-    grid-row: 4;
+    padding-bottom: 5vh;
 
     .menuItemsImg {
         display: none;

@@ -5,8 +5,6 @@ body {
 #mainHomePage {
   position: relative;
   top: 13vh;
-  display: grid;
-  grid-template-rows: 80vh 20vh 80vh 20vh 190vh;
 }
 
 /*Adjusts anchor scroll due to fixed nav bar postiion*/
@@ -20,12 +18,11 @@ body {
 
 /*Sets main menu/top div on page*/
 #mainMenu {
-  grid-row: 1;
   width: 100vw;
   text-align: end;
   display: grid;
   background: rgba(34, 34, 34, 0.5);
-  grid-template-rows: 3fr 2fr 2fr 12fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1.5fr;
   /*Css for links on main menu area*/
   /*Img animation on page load*/
   /*arrow down css and animation*/
@@ -34,6 +31,7 @@ body {
 #mainMenu #socialIcons {
   text-align: start;
   margin: 12px;
+  height: fit-content;
 }
 
 #mainMenu #socialIcons a img {
@@ -52,73 +50,52 @@ body {
   margin-left: 20vw;
   position: relative;
   right: 8vw;
+  font-size: 1.2em;
 }
 
 #mainMenu #mainBtnsList {
   grid-row: 4;
-  overflow-x: hidden;
+  /*sets padding on a tag to fill parent element li*/
+  /*sets width of li to have custom sizing*/
 }
 
 #mainMenu #mainBtnsList li {
   position: relative;
   right: 8vw;
   margin-top: 2vh;
-  padding: 2vh 0 2vh 0;
   text-align: center;
   list-style: none;
   border: 2px #dadada solid;
+}
+
+#mainMenu #mainBtnsList li:active {
+  background-color: rgba(0, 0, 0, 0.527);
 }
 
 #mainMenu #mainBtnsList li a {
   text-decoration: none;
 }
 
+#mainMenu #mainBtnsList #mainAHrs, #mainMenu #mainBtnsList #mainARes, #mainMenu #mainBtnsList #mainAMen, #mainMenu #mainBtnsList #mainALoc {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  display: block;
+}
+
 #mainMenu #mainBtnsList #mainLiHrs {
   margin-left: 55vw;
-}
-
-#mainMenu #mainBtnsList #mainAHrs {
-  padding: 2vh 16vw 2vh 16vw;
-}
-
-#mainMenu #mainBtnsList #mainAHrs:active {
-  background-color: rgba(0, 0, 0, 0.527);
 }
 
 #mainMenu #mainBtnsList #mainLiRes {
   margin-left: 60vw;
 }
 
-#mainMenu #mainBtnsList #mainARes {
-  padding: 2vh 12vw 2vh 12vw;
-}
-
-#mainMenu #mainBtnsList #mainARes:active {
-  background-color: rgba(0, 0, 0, 0.527);
-}
-
 #mainMenu #mainBtnsList #mainLiMen {
   margin-left: 65vw;
 }
 
-#mainMenu #mainBtnsList #mainAMen {
-  padding: 2vh 11vw 2vh 11vw;
-}
-
-#mainMenu #mainBtnsList #mainAMen:active {
-  background-color: rgba(0, 0, 0, 0.527);
-}
-
 #mainMenu #mainBtnsList #mainLiLoc {
   margin-left: 70vw;
-}
-
-#mainMenu #mainBtnsList #mainALoc {
-  padding: 2vh 5vw 2vh 5vw;
-}
-
-#mainMenu #mainBtnsList #mainALoc:active {
-  background-color: rgba(0, 0, 0, 0.527);
 }
 
 @keyframes transitionIn {
@@ -135,30 +112,31 @@ body {
   height: 12vh;
   position: relative;
   left: 10vw;
-  bottom: 5vh;
   animation: transitionIn 2s ease-out;
 }
 
 /*Hours div*/
 #hmHrs {
-  grid-row: 2;
   background-color: rgba(128, 128, 128, 0.9);
   width: 100%;
+  padding-bottom: 1vh;
   /*Tablet and desktop only*/
 }
 
 #hmHrs h1 {
   position: relative;
   left: 3vw;
+  bottom: 1.5vh;
   width: 20vw;
 }
 
 #hmHrs p {
   position: relative;
-  left: 7vw;
-  top: 1vh;
+  left: 10vw;
+  bottom: 1vh;
   margin-top: 0.5vh;
   width: 90vw;
+  height: fit-content;
 }
 
 #hmHrs #hrsImg {
@@ -170,7 +148,8 @@ body {
   grid-row: 3;
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
-  grid-template-rows: 1% 9% 90%;
+  grid-template-rows: 1% 10% 89%;
+  padding-bottom: 5vh;
 }
 
 #hmLoc #anchorLoc {
@@ -180,26 +159,27 @@ body {
 #hmLoc h1 {
   grid-row: 2;
   position: relative;
-  top: 1vh;
   left: 3vw;
   width: 60vw;
 }
 
 #hmLoc #googleMap {
-  grid-row: 3;
+  grid-row: 3 / 4;
   justify-self: center;
   align-self: center;
+  padding-top: 2vh;
   width: 90vw;
-  height: 60vh;
+  height: 50vh;
 }
 
 /*Contact div*/
 #hmCon {
-  grid-row: 4;
   background-color: rgba(90, 90, 90, 0.829);
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
 #hmCon h1 {
@@ -210,94 +190,89 @@ body {
 }
 
 #hmCon p {
-  text-decoration: underline;
+  font-size: 1.4em;
+  height: fit-content;
 }
 
 #hmCon #phoneLabel {
   grid-area: 2 / 1;
-  justify-self: center;
 }
 
 #hmCon #emailLabel {
-  grid-area: 2 / 2;
-  justify-self: center;
+  grid-area: 3 / 1;
 }
 
 #hmCon #socialLabel {
-  grid-area: 2 / 3;
-  justify-self: center;
+  grid-area: 4 / 1;
 }
 
 #hmCon a {
-  text-decoration: none;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 
 #hmCon #phoneBtn {
-  grid-area: 3 / 1;
-  justify-self: center;
+  grid-area: 2 / 2;
+  justify-self: start;
 }
 
 #hmCon #mailBtn {
   grid-area: 3 / 2;
-  justify-self: center;
+  justify-self: start;
 }
 
 #hmCon #socialContact {
-  grid-area: 3 / 3;
-  justify-self: center;
-  text-align: center;
-  width: 25vw;
+  grid-area: 4 / 2;
+  justify-self: start;
+  width: 60vw;
+  position: relative;
+  right: 3vw;
+  /*Changes padding of social icons so tehy do not overflow into next line*/
 }
 
 #hmCon #socialContact a img {
-  width: 20px;
+  width: 30px;
   padding: 5%;
+}
+
+@media only screen and (max-width: 370px) {
+  #hmCon #socialContact a img {
+    padding: 3%;
+  }
 }
 
 /*Images div*/
 #hmImg {
   grid-row: 5;
   background: rgba(44, 44, 44, 0.8);
+  /*no template, only used to center items*/
   display: grid;
-  grid-template-rows: 10vh 5vh 40vh 5vh 170vh;
-  overflow-y: scroll;
+  justify-items: center;
+  padding-bottom: 5vh;
   /*sets positioning and grid of img gallery*/
 }
 
 #hmImg h1 {
+  justify-self: start;
   position: relative;
   left: 3vw;
   width: 70vw;
 }
 
-#hmImg #vidIntro {
-  grid-row: 2;
-  justify-self: center;
-  text-decoration: underline;
+#hmImg #vidIntro, #hmImg #imgIntro {
+  font-size: 1.2em;
+  padding: 2vh 0 2vh 0;
 }
 
 #hmImg #pizzaVid {
-  grid-row: 3;
   width: 95vw;
-  justify-self: center;
   max-width: 560px;
 }
 
-#hmImg #imgIntro {
-  grid-row: 4;
-  justify-self: center;
-  align-self: center;
-  text-decoration: underline;
-  position: relative;
-  bottom: 1vh;
-}
-
 #hmImg #imgGallery {
-  grid-row: 5;
   display: grid;
+  gap: 10px 0px;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 0px;
+  width: 90%;
   align-items: center;
   justify-items: center;
 }
@@ -310,15 +285,5 @@ body {
   max-height: 400px;
   /*object fit ensures the photos are all square*/
   object-fit: cover;
-}
-
-#hmImg #imgGallery .groupOne {
-  position: relative;
-  left: 3vw;
-}
-
-#hmImg #imgGallery .groupTwo {
-  position: relative;
-  right: 3vw;
 }
 /*# sourceMappingURL=mainIndex.css.map */
