@@ -2,7 +2,6 @@
 
     /***********CSS for Header***********/
     #topNav{
-
         grid-template-columns: 2fr 4fr 5fr;
         
         /*hides mobile+tablet checkbox*/
@@ -182,12 +181,131 @@
                 #mainLiLoc {
                     margin-left: 35vw;
                 }
+
+                li:hover {
+                    transform: scale(1.05);
+                    transition: all 0.3s ease-in;
+
+                    a:hover {
+                        transform: scale(1.1);
+                        transition: all 0.3s ease-in;
+                    }    
+                }
             }    
         }
     }
 
     /**********CSS for menu.html**********/
+    #mainMenuPage {
+        /*for justifying items in center*/
+        display: grid;
 
+        #mainMenu {
+            width: 80vw;
+            justify-self: center;
+            grid-template-rows: 1fr 1fr 4fr;
+
+            #socialIcons {
+                display: none;
+            }
+
+            h1 {
+                grid-row: 1;
+                font-size: 5.5em;
+                right: 16vw;
+            }
+
+            p {
+                grid-row: 2;
+                align-self: center;
+                font-size: 2.8em;
+                right: 16vw;
+            }
+
+            #mainBtnsList {
+                grid-row: 3 / 4;
+                padding-bottom: 5vh;
+
+                li:hover {
+                    transform: scale(1.05);
+                    transition: all 0.3s ease-in;
+
+                    a:hover {
+                        transform: scale(1.1);
+                        transition: all 0.3s ease-in;
+                    }    
+                }
+
+                #mainLiDrinks {
+                    margin-left: 75vw;
+                    right: 16vw;
+                }
+        
+                #mainLiFood {
+                    margin-left: 80vw;
+                    right: 16vw;
+                }
+        
+                #mainLiDesserts {
+                    margin-left: 85vw;
+                    right: 16vw;
+                }
+            }
+        }
+
+        section {
+            h1 {
+                font-size: 5em;
+            }
+
+            h3 {
+                font-size: 1.9em;
+            }
+
+            p {
+                font-size: 1.7em;
+            }
+        }
+
+        #drinks {
+            width: 80vw;
+            justify-self: center;
+
+            .menuItemsImg {
+                width: 240px;
+            }
+
+            #cocktails {
+                
+                h3, #cocktailImg {
+                    position: relative;
+                    left: 2vw;
+                }
+
+                p {
+                    position: relative;
+                    left: 4vw; 
+                }
+
+                #cocktailImg {
+                    bottom: 1vh;
+                }
+            }
+
+            #wineBeer {
+                
+                p {
+                    position: relative;
+                    left: 2vw; 
+                }
+            }
+
+            /*Resets position of back to top button in drinks list*/    
+            #drinksTop {
+                left: 5vw;
+            }
+        }
+    }
 
     /**********CSS for about.html**********/
 

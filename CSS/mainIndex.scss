@@ -10,7 +10,7 @@ body{
 /*Adjusts anchor scroll due to fixed nav bar postiion*/
 .anchorHidden {
     position: relative;
-    bottom: 13vh;
+    bottom: 12vh;
     left: 5vw;
     width: 10vw;
     visibility: hidden;
@@ -185,6 +185,10 @@ body{
     grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
+
+    #anchorCon {
+        bottom: 15vh;
+    }
 
     h1 {
         grid-area: 1 / 1;

@@ -378,7 +378,7 @@ footer .topBtn .backTopBtn {
   }
   #mainHomePage #hmHrs #anchorHrs {
     position: relative;
-    bottom: 34vh;
+    bottom: 38vh;
   }
   #mainHomePage #hmHrs h1 {
     grid-column: 1;
@@ -427,6 +427,9 @@ footer .topBtn .backTopBtn {
   #mainHomePage #hmLoc #googleMap {
     height: 60vh;
   }
+  #mainHomePage #hmCon #anchorCon {
+    bottom: 20vh;
+  }
   #mainHomePage #hmCon h1 {
     font-size: 4em;
   }
@@ -466,7 +469,6 @@ footer .topBtn .backTopBtn {
   /*Adjusts position and sizing of elements throughout menu page*/
   #mainMenuPage {
     top: 15vh;
-    /*Sets cocktail image size and visibility*/
   }
   #mainMenuPage #mainMenu {
     padding-bottom: 0;
@@ -578,14 +580,16 @@ footer .topBtn .backTopBtn {
   }
   #mainAbout #aboutUsArticle #kneadLogoAbout {
     display: block;
-    width: 220px;
+    width: 20vw;
+    max-width: 220px;
     padding: 0 3vw 0 3vw;
     /*wraps image around text*/
     float: left;
   }
   #mainAbout #aboutUsArticle #chefKnead {
     display: block;
-    width: 400px;
+    width: 30vw;
+    max-width: 400px;
     border-radius: 40px;
     padding: 2vh 3vw 2vh 3vw;
     float: right;
@@ -603,6 +607,7 @@ footer .topBtn .backTopBtn {
   }
   #mainAbout #aboutUsArticle #chefContainer .chefPizza {
     width: 40vw;
+    max-width: 500px;
     border-radius: 40px;
   }
   #mainAbout #aboutUsArticle #chefContainer .pizImgLeft {
@@ -810,7 +815,97 @@ footer .topBtn .backTopBtn {
   #mainHomePage #mainMenu #mainBtnsList #mainLiLoc {
     margin-left: 35vw;
   }
+  #mainHomePage #mainMenu #mainBtnsList li:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in;
+  }
+  #mainHomePage #mainMenu #mainBtnsList li:hover a:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+  }
   /**********CSS for menu.html**********/
+  #mainMenuPage {
+    /*for justifying items in center*/
+    display: grid;
+  }
+  #mainMenuPage #mainMenu {
+    width: 80vw;
+    justify-self: center;
+    grid-template-rows: 1fr 1fr 4fr;
+  }
+  #mainMenuPage #mainMenu #socialIcons {
+    display: none;
+  }
+  #mainMenuPage #mainMenu h1 {
+    grid-row: 1;
+    font-size: 5.5em;
+    right: 16vw;
+  }
+  #mainMenuPage #mainMenu p {
+    grid-row: 2;
+    align-self: center;
+    font-size: 2.8em;
+    right: 16vw;
+  }
+  #mainMenuPage #mainMenu #mainBtnsList {
+    grid-row: 3 / 4;
+    padding-bottom: 5vh;
+  }
+  #mainMenuPage #mainMenu #mainBtnsList li:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in;
+  }
+  #mainMenuPage #mainMenu #mainBtnsList li:hover a:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+  }
+  #mainMenuPage #mainMenu #mainBtnsList #mainLiDrinks {
+    margin-left: 75vw;
+    right: 16vw;
+  }
+  #mainMenuPage #mainMenu #mainBtnsList #mainLiFood {
+    margin-left: 80vw;
+    right: 16vw;
+  }
+  #mainMenuPage #mainMenu #mainBtnsList #mainLiDesserts {
+    margin-left: 85vw;
+    right: 16vw;
+  }
+  #mainMenuPage section h1 {
+    font-size: 5em;
+  }
+  #mainMenuPage section h3 {
+    font-size: 1.9em;
+  }
+  #mainMenuPage section p {
+    font-size: 1.7em;
+  }
+  #mainMenuPage #drinks {
+    width: 80vw;
+    justify-self: center;
+    /*Resets position of back to top button in drinks list*/
+  }
+  #mainMenuPage #drinks .menuItemsImg {
+    width: 240px;
+  }
+  #mainMenuPage #drinks #cocktails h3, #mainMenuPage #drinks #cocktails #cocktailImg {
+    position: relative;
+    left: 2vw;
+  }
+  #mainMenuPage #drinks #cocktails p {
+    position: relative;
+    left: 4vw;
+  }
+  #mainMenuPage #drinks #cocktails #cocktailImg {
+    bottom: 1vh;
+  }
+  #mainMenuPage #drinks #wineBeer p {
+    position: relative;
+    left: 2vw;
+  }
+  #mainMenuPage #drinks #drinksTop {
+    left: 5vw;
+  }
   /**********CSS for about.html**********/
   #mainAbout {
     /*keyframes need to be adjusted down to left: -500% at 100% animation. 

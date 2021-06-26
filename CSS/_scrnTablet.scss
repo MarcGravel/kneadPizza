@@ -126,7 +126,7 @@
             /*adjusts positioning of anchor due to grid*/
             #anchorHrs {
                 position: relative;
-                bottom: 34vh;
+                bottom: 38vh;
             }
     
             h1 {
@@ -189,6 +189,10 @@
     
         /*Changes font size of contact area. Also disallows phone number to be clickable*/
         #hmCon {
+            
+            #anchorCon {
+                bottom: 20vh;
+            }
             
             h1 {
                 font-size: 4em;
@@ -291,7 +295,6 @@
 
         }
 
-        /*Sets cocktail image size and visibility*/
         #drinks {
 
             /*Adds padding to Vino h1 tag so it does not reposition from floating image*/
@@ -400,7 +403,8 @@
             
             #kneadLogoAbout {
                 display: block;
-                width: 220px;
+                width: 20vw;
+                max-width: 220px;
                 padding: 0 3vw 0 3vw;
                 /*wraps image around text*/
                 float: left;
@@ -409,7 +413,8 @@
             /*style and position of in article photo*/
             #chefKnead {
                 display: block;
-                width: 400px;
+                width: 30vw;
+                max-width: 400px;
                 border-radius: 40px;
                 padding: 2vh 3vw 2vh 3vw;
                 float: right;
@@ -427,6 +432,7 @@
 
                 .chefPizza {
                     width: 40vw;
+                    max-width: 500px;
                     border-radius: 40px;
                 }
 
