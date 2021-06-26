@@ -11,43 +11,141 @@ body{
 different % throughout animation keeps the images still for a bit before
 changing to next image. Also, first and last images in html are the same 
 so once this animation reaches 100% at the last image and resets, 
-the image is the same. gives the illusion of continuous infinit loop*/
+the image is the same. gives the illusion of continuous infinit loop
+
+since there are 20 photos we must go up in incraments of 5% to reach the 2000% width*/
 @keyframes slider {
     0% {
         left: 0;
     }
-    20% {
+    3% {
         left: 0;
     }
-    25% {
+    5% {
         left: -100%;
+    }
+    7% {
+        left: -100%;
+    }
+    10% {
+        left: -200%;
+    }
+    13% { 
+        left: -200%;
+    }
+    15% {
+        left: -300%;
+    }
+    17% {
+        left: -300%;
+    }
+    20% {
+        left: -400%;
+    }
+    23% {
+        left: -400%;
+    }
+    25% {
+        left: -500%;
+    }
+    27% {
+        left: -500%;
+    }
+    30% {
+        left: -600%;
+    }
+    33% {
+        left: -600%;
+    }
+    35% {
+        left: -700%;
+    }
+    37% {
+        left: -700%;
+    }
+    40% {
+        left: -800%;
+    }
+    43% {
+        left: -800%;
     }
     45% {
-        left: -100%;
+        left: -900%;
+    }
+    47% {
+        left: -900%;
     }
     50% {
-        left: -200%;
+        left: -1000%;
+    }
+    53% {
+        left: -1000%;
+    }
+    55% {
+        left: -1100%;
+    }
+    57% {
+        left: -1100%;
+    }
+    60% {
+        left: -1200%;
+    }
+    63% {
+        left: -1200%;
+    }
+    65% {
+        left: -1300%;
+    }
+    67% {
+        left: -1300%;
     }
     70% {
-        left: -200%;
+        left: -1400%;
+    }
+    73% {
+        left: -1400%;
     }
     75% {
-        left: -300%;
+        left: -1500%;
+    }
+    77% {
+        left: -1500%;
+    }
+    80% {
+        left: -1600%;
+    }
+    83% {
+        left: -1600%;
+    }
+    85% {
+        left: -1700%;
+    }
+    87% {
+        left: -1700%;
+    }
+    90% {
+        left: -1800%;
+    }
+    93% {
+        left: -1800%;
     }
     95% {
-        left: -300%;
+        left: -1900%;
+    }
+    97% {
+        left: -1900%;
     }
     100% {
-        left: -400%;
+        left: -2000%;
     }
 }
 
 /*Carousel positioning*/
 #imgCarousel {
-    background-color: rgba(80, 80, 80, 0.473);
+    background-color: none;
     overflow: hidden;
-    position: relative;
-    left: 5vw;
+    position: relative; 
+    left: 4vw;
     width: 90vw;
     padding: 2vh 0 2vh 0;
 
@@ -56,8 +154,9 @@ the image is the same. gives the illusion of continuous infinit loop*/
         position: relative;
         left: 0;
         margin: 0;
-        width: 500%;
-        animation: 20s slider infinite;
+        /*width is 100% higher to account for transition image to start at end of animation*/
+        width: 2100%;
+        animation: 120s slider infinite;
 
         /*Sets image size and squares all images*/
         img {
@@ -69,9 +168,12 @@ the image is the same. gives the illusion of continuous infinit loop*/
             float: left;
             border-radius: 20px;
         }
-    }
 
-    /*Sets image size and squares all images*/
+        /*hides images only intended for the quad-carusel on desktop*/
+        .deskCaruImg {
+            display: none;
+        }
+    }
 }
 
 /*styling for the main content of about us*/

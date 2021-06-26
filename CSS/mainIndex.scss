@@ -49,6 +49,10 @@ body{
         font-size: 1.2em;
     }
 
+    #mainVidContainer {
+        display: none;
+    }
+
     /*Css for links on main menu area*/
     #mainBtnsList {
         grid-row: 4;
@@ -70,7 +74,7 @@ body{
             text-decoration: none;
         }
 
-        /*sets padding on a tag to fill parent element li*/
+        /*sets padding on a-tag to fill parent element li*/
         #mainAHrs, #mainARes, #mainAMen, #mainALoc  {
             padding-top: 2vh;
             padding-bottom: 2vh;
@@ -213,11 +217,21 @@ body{
     #phoneBtn {
         grid-area: 2 / 2;
         justify-self: start;
+        
+        &:active {
+            color: rgb(43, 43, 255);
+            transform: scale(1.1);
+        }
     }
 
     #mailBtn {
         grid-area: 3 / 2;
         justify-self: start;
+
+        &:active {
+            color: rgb(43, 43, 255);
+            transform: scale(1.1);
+        }
     }
 
     #socialContact {
@@ -266,6 +280,7 @@ body{
     #pizzaVid{
         width: 95vw;
         max-width: 560px;
+        height: 315px;
     }
     
     /*sets positioning and grid of img gallery*/

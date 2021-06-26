@@ -2,6 +2,9 @@
 
     /***********CSS for Header***********/
     #topNav{
+
+        grid-template-columns: 2fr 4fr 5fr;
+        
         /*hides mobile+tablet checkbox*/
         #toggle, #hamburger {
             display: none;
@@ -16,13 +19,85 @@
             }
         }
 
-        /*styling for this is in _header.scss*/
+        /*Sets nav bar navigation buttons*/
         #headerNavBtns {
             display: inline-block;
-            
+            overflow: hidden;
+            grid-column: 3 / 10;
+            align-self: center;
+            justify-self: center;
+            /*Allows visibility of entire button during animation*/
+            overflow: visible;
+
+            .navBtns {
+                margin-left: 1vw;
+                text-align: center;
+                border: 2px #dadada solid;
+                height: fit-content;
+
+                &:hover {
+                    background-color: rgb(71, 71, 71);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 1.6em;
+                /*Transform used to not affect overal layout of sibling elements*/
+                transform: scale(1);
+                transition: all 0.4s ease-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            #homeNavBtn, #menuNavBtn {
+                padding: 2vh 3vw 2vh 3vw;
+                display: inline-block;
+                
+            }
+
+            #aboutNavBtn {
+                padding: 2vh 3vw 2vh 3vw;
+                display: inline-block;
+            }
+
+            /*fixes button sizing to avoid overflow between 1100 and 1200px screen*/
+            @media only screen and (max-width: 1200px) {
+                #homeNavBtn, #menuNavBtn {
+                    padding: 2vh 2vw 2vh 2vw;
+                }
+    
+                #aboutNavBtn {
+                    padding: 2vh 2vw 2vh 2vw;
+                }
+            }
         }
 
-        /*Makes phone number none clickable*/
+        /*sets size and location of new social icons*/
+        #topNavSocial {
+            display: inline-block;
+            grid-column: 2;
+            align-self: center;
+
+            a img{
+                margin-left: 40px;
+                width: 50px;
+                /*Transform used to not affect overal layout of sibling elements*/
+                transform: scale(1);
+                transition: all 0.3s ease-out;
+                
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    #phoneBox {
+         /*Makes phone number none clickable*/
         .phoneLink {
             pointer-events: none;
         }
@@ -32,25 +107,206 @@
 
     #mainHomePage {
 
+        /*Re organizes grid to allow space for intro video*/
         #mainMenu {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 3fr 1.5fr;
 
             #socialIcons {
-        
-                a img {
-                    width: 50px;
-                    margin-right: 35px;
-                }
+                display: none;
             }
 
             h1 {
+                grid-row: 1;
+                grid-column: 2;
                 font-size: 5.5em;
-                bottom: 3vh;
             }
         
             p {
+                grid-row: 2;
+                grid-column: 1 / 3;
                 font-size: 2.8em;
-                bottom: 3vh;
+                margin-left: 30vw;
             }
+
+            #mainVidContainer {
+                display: inline-block;
+                grid-column: 1;
+                grid-row: 3 / 5;
+                justify-self: center;
+                align-self: center;
+                /*used to center items*/
+                display: grid;
+
+                #mainVidIntro {
+                    font-weight: normal;
+                    font-size: 1.8em;
+                    justify-self: center;
+                    padding-bottom: 3vh;
+                }
+
+                #pizzaVid {
+                    width: 50vw;
+                    height: 315px;
+                    max-width: 560px;
+                }
+            }
+
+            /*allows fonts to flow into colum 1 to avoid grid height overflow
+            issues between 1100 and 1200px screen due to increaded font*/
+            @media only screen and (max-width: 1200px) {
+               
+                h1, p {
+                    grid-column: 1 / 3;
+                    justify-self: end;
+                }
+            }
+
+            /*re sizes buttons to keep similar style as mobile and tablet once grid was reset*/
+            #mainBtnsList {
+                grid-row: 3 / 5;
+                grid-column: 2;
+
+                #mainLiHrs {
+                    margin-left: 20vw;
+                }
+        
+                #mainLiRes {
+                    margin-left: 25vw;
+                }
+        
+                #mainLiMen {
+                    margin-left: 30vw;
+                }
+        
+                #mainLiLoc {
+                    margin-left: 35vw;
+                }
+            }    
+        }
+    }
+
+    /**********CSS for menu.html**********/
+
+
+    /**********CSS for about.html**********/
+
+    #mainAbout {
+        /*keyframes need to be adjusted down to left: -500% at 100% animation. 
+        Since we now want 4 images on the screen at once images will drop from 90vw
+        to 20vw. This means we can cut the total width of the carousel container down 
+        by 4x. from 2000% to 500%. but we need to add the 3 extra starting images to compelte
+        a smooth loop. Total width for container needs to be 800%. There will only need 
+        to be 5 transitions in the keyframes instead of 20 originally*/
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+            10% {
+                left: 0;
+            }
+            20% {
+                left: -100%
+            }
+            30% {
+                left: -100%
+            }        
+            40% {
+                left: -200%
+            }
+            50% {
+                left: -200%
+            }
+            60% {
+                left: -300%
+            }
+            70% {
+                left: -300%
+            }
+            80% {
+                left: -400%
+            }
+            90% {
+                left: -400%
+            }
+            /*helps smooth final snap to complete smooth looping*/
+            98% {
+                left: -500%
+            }
+            100% {
+                left: -500%
+            }
+
+        }
+
+        /*Carousel positioning*/
+        #imgCarousel {
+            width: 90vw;
+            left: 5vw;
+
+            /*resets container width as images are smaller, changes animation speed to hold on page for longer*/
+            #selfCont {
+                width: 800%;
+                animation: 50s slider infinite;
+
+                /*Sets image size and squares all images*/
+                img {
+                    height: 20vw;
+                    width: 20vw;
+                    /*creates gap in images without breaking viewable area*/
+                    margin-right: 2.6vw;
+                }
+
+                .deskCaruImg {
+                    display: inline-block;
+                }
+            }
+        }
+
+        #aboutUsArticle {
+
+            #chefContainer {
+                width: 100%;
+                height: 60vh;
+                display: grid;
+                grid-template-rows: 50% 50%;
+                grid-template-columns: 50% 50%;
+                gap: 5vh 5vw;
+                padding: 0 0 5vh 0;
+        
+                .chefPizza {
+                    width: 30vw;
+                    border-radius: 40px;
+                }
+        
+                .pizImgLeft {
+                    justify-self: center;
+                }
+        
+                #pizImgTop {
+                    align-self: end;
+                }
+        
+                #pizImgBtm {
+                    align-self: start;
+                }
+        
+                .pizImgRight {
+                    grid-column: 2;
+                    grid-row: 1 / 3;
+                    align-self: center;
+                    justify-self: start;
+                }
+            }
+
+            /*Adjusts container so images do not overflow but cant remain large on a smaller screen*/
+            @media only screen and (min-width: 1250px) {
+
+                #chefContainer {
+                    height: 80vh;
+                }
+            }
+    
         }
     }
 }

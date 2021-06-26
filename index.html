@@ -13,6 +13,13 @@
 <body>
     <header id="topNav">
         <a id="logoLink" href="index.html"><img id="logo" src="/Media/kneadIconWhite.png" alt="Knead Pizza Logo"></a>
+        <!--Social icons only visible in this box on desktop-->
+        <div id="topNavSocial">
+            <a href="https://www.facebook.com"><img src="/Media/facebookIcon.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="/Media/InstagramIcon.png" alt="Instagram"></a>
+            <a href="https://www.twitter.com"><img src="/Media/twitterIcon.png" alt="Twitter"></a>
+            <a href="https://www.pinterest.ca"><img src="/Media/pintrestIcon.png" alt="Pintrest"></a>
+        </div>
         <input type="checkbox" id="toggle">
         <label id="hamburger" for="toggle"></label>
         <div id="smScrnOverlay">
@@ -24,11 +31,9 @@
         </div>
         <!--Nav buttons only visible on desktop-->
         <div id="headerNavBtns">
-            <ul id="navBtnList">
-                <li class="navBtns"><a id="homeNavBtn" href="index.html">Home</a></li>
-                <li class="navBtns"><a id="menuNavBtn" href="menu.html">Menu</a></li>
-                <li class="navBtns"><a id="aboutNavBtn" href="about.html">About Us</a></li>
-            </ul>
+            <a class="navBtns" id="homeNavBtn" href="index.html">Home</a>
+            <a class="navBtns" id="menuNavBtn" href="menu.html">Menu</a>
+            <a class="navBtns" id="aboutNavBtn" href="about.html">About Us</a>
         </div>
     </header>
     <header id="phoneBox">
@@ -46,6 +51,21 @@
             <p>
                 Feel good about ordering it. Feel good about eating it.
             </p>
+            <!--Video and text only visible on desktop-->
+            <div id="mainVidContainer">
+                <h2 id="mainVidIntro">
+                    Intro on how we make REAL pizza
+                </h2>
+                <iframe 
+                    id="pizzaVid"
+                    src="https://www.youtube.com/embed/FHvZgt3ExDI" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    alt="Making a Pizza: Video">
+                </iframe>
+            </div>
             <ul id="mainBtnsList">
                 <li id="mainLiHrs"><a id="mainAHrs" href="#anchorHrs">Hours</a></li>
                 <li id="mainLiRes"><a id="mainARes" href="#anchorCon">Reserve</a></li>
@@ -103,8 +123,6 @@
             </p>
             <iframe 
                 id="pizzaVid"
-                width="560" 
-                height="315" 
                 src="https://www.youtube.com/embed/FHvZgt3ExDI" 
                 title="YouTube video player" 
                 frameborder="0" 

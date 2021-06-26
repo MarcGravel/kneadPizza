@@ -2,7 +2,7 @@
 
     /***********CSS for Header***********/
     #topNav {
-
+        
         #logoLink {
             
             #logo {
@@ -66,6 +66,7 @@
         .phoneLink {
             pointer-events: none;
             font-size: 1.6em;
+            text-decoration: none;
         }
 
     }
@@ -203,6 +204,7 @@
     
             .phoneLink {
                 pointer-events: none;
+                text-decoration: none;
             }
     
             #socialContact {
@@ -421,6 +423,7 @@
                 grid-template-rows: 50% 50%;
                 grid-template-columns: 50% 50%;
                 gap: 20px 20px;
+                padding: 10vw 0 10vw 0;
 
                 .chefPizza {
                     width: 40vw;

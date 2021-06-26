@@ -53,9 +53,13 @@ body {
   font-size: 1.2em;
 }
 
+#mainMenu #mainVidContainer {
+  display: none;
+}
+
 #mainMenu #mainBtnsList {
   grid-row: 4;
-  /*sets padding on a tag to fill parent element li*/
+  /*sets padding on a-tag to fill parent element li*/
   /*sets width of li to have custom sizing*/
 }
 
@@ -215,9 +219,19 @@ body {
   justify-self: start;
 }
 
+#hmCon #phoneBtn:active {
+  color: #2b2bff;
+  transform: scale(1.1);
+}
+
 #hmCon #mailBtn {
   grid-area: 3 / 2;
   justify-self: start;
+}
+
+#hmCon #mailBtn:active {
+  color: #2b2bff;
+  transform: scale(1.1);
 }
 
 #hmCon #socialContact {
@@ -266,6 +280,7 @@ body {
 #hmImg #pizzaVid {
   width: 95vw;
   max-width: 560px;
+  height: 315px;
 }
 
 #hmImg #imgGallery {
