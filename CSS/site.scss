@@ -28,6 +28,19 @@ body {
     background-attachment: fixed;
 }
 
+/*Global CSS for all back to top buttons on site*/
+.topBtn {
+
+    .backTopBtn:active{
+        background-color: rgba(15, 15, 15, 0.925);
+    }
+
+    /*background needs to be lighter here due to div background color*/
+    #foodTop:active {
+        background-color: rgb(83, 83, 83);
+    }
+}
+
 @import '_header.scss';
 @import '_hamburger.scss';
 
