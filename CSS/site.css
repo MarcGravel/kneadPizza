@@ -498,6 +498,7 @@ footer .topBtn .backTopBtn {
   #mainMenuPage #drinks {
     /*Adds padding to Vino h1 tag so it does not reposition from floating image*/
     /*Sets a larger margin so text does not wrap underneath*/
+    /*Only visible on desktop*/
     /*Resets position of back to top button in drinks list*/
   }
   #mainMenuPage #drinks #vinoTag {
@@ -514,6 +515,9 @@ footer .topBtn .backTopBtn {
     float: right;
     width: 260px;
     margin-top: 3vh;
+  }
+  #mainMenuPage #drinks #beerImg, #mainMenuPage #drinks #landscapeDrinkImg {
+    display: none;
   }
   #mainMenuPage #drinks #teaImg {
     width: 280px;
@@ -744,6 +748,17 @@ footer .topBtn .backTopBtn {
   #phoneBox .phoneLink {
     pointer-events: none;
   }
+  /*Global CSS for all back to top buttons on site*/
+  /*hover effect for all back to top buttons on menu page*/
+  .topBtn {
+    /*background needs to be lighter here due to div background color*/
+  }
+  .topBtn .backTopBtn:hover {
+    background-color: #292929;
+  }
+  .topBtn #foodTop:hover {
+    background-color: #3b3b3b;
+  }
   /***********CSS for index.html***********/
   #mainHomePage {
     /*Re organizes grid to allow space for intro video*/
@@ -824,31 +839,30 @@ footer .topBtn .backTopBtn {
     transition: all 0.3s ease-in;
   }
   /**********CSS for menu.html**********/
-  #mainMenuPage {
-    /*for justifying items in center*/
-    display: grid;
-  }
   #mainMenuPage #mainMenu {
-    width: 80vw;
-    justify-self: center;
     grid-template-rows: 1fr 1fr 4fr;
+    grid-template-columns: 1fr 1fr;
   }
   #mainMenuPage #mainMenu #socialIcons {
     display: none;
   }
   #mainMenuPage #mainMenu h1 {
     grid-row: 1;
+    grid-column: 2;
     font-size: 5.5em;
     right: 16vw;
   }
   #mainMenuPage #mainMenu p {
     grid-row: 2;
+    grid-column: 1 / 3;
     align-self: center;
     font-size: 2.8em;
     right: 16vw;
   }
   #mainMenuPage #mainMenu #mainBtnsList {
     grid-row: 3 / 4;
+    grid-column: 2;
+    width: 50vw;
     padding-bottom: 5vh;
   }
   #mainMenuPage #mainMenu #mainBtnsList li:hover {
@@ -860,16 +874,30 @@ footer .topBtn .backTopBtn {
     transition: all 0.3s ease-in;
   }
   #mainMenuPage #mainMenu #mainBtnsList #mainLiDrinks {
-    margin-left: 75vw;
+    margin-left: 25vw;
     right: 16vw;
   }
   #mainMenuPage #mainMenu #mainBtnsList #mainLiFood {
-    margin-left: 80vw;
+    margin-left: 30vw;
     right: 16vw;
   }
   #mainMenuPage #mainMenu #mainBtnsList #mainLiDesserts {
-    margin-left: 85vw;
+    margin-left: 35vw;
     right: 16vw;
+  }
+  #mainMenuPage #mainMenu #foodIntro {
+    display: inline-block;
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 1.6em;
+    text-align: start;
+    position: relative;
+    right: 10vw;
+    bottom: 5vh;
+    border-left: 8px #f81313b2 solid;
+    border-radius: 50px;
+    padding-left: 3vw;
+    background-color: rgba(0, 0, 0, 0.39);
   }
   #mainMenuPage section h1 {
     font-size: 5em;
@@ -881,30 +909,121 @@ footer .topBtn .backTopBtn {
     font-size: 1.7em;
   }
   #mainMenuPage #drinks {
-    width: 80vw;
-    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.6fr 1fr 0.1fr;
+    /*repositions the anchor tag for navigation due to grid*/
     /*Resets position of back to top button in drinks list*/
+  }
+  #mainMenuPage #drinks #anchorDrink {
+    grid-column: 1;
+    grid-row: 1;
   }
   #mainMenuPage #drinks .menuItemsImg {
     width: 240px;
   }
-  #mainMenuPage #drinks #cocktails h3, #mainMenuPage #drinks #cocktails #cocktailImg {
-    position: relative;
-    left: 2vw;
+  #mainMenuPage #drinks #cocktails {
+    grid-column: 1;
+    grid-row: 1;
   }
   #mainMenuPage #drinks #cocktails p {
     position: relative;
-    left: 4vw;
+    left: 1vw;
   }
   #mainMenuPage #drinks #cocktails #cocktailImg {
-    bottom: 1vh;
+    display: none;
+  }
+  #mainMenuPage #drinks #cocktails #landscapeDrinkImg {
+    display: block;
+    height: 10vw;
+    width: 190%;
+    margin: 4vh 0 0 2.5vw;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  #mainMenuPage #drinks #wineBeer {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+  #mainMenuPage #drinks #wineBeer #vinoTag {
+    padding-top: 2vh;
   }
   #mainMenuPage #drinks #wineBeer p {
     position: relative;
     left: 2vw;
   }
-  #mainMenuPage #drinks #drinksTop {
-    left: 5vw;
+  #mainMenuPage #drinks #wineBeer #wineImg {
+    display: none;
+  }
+  #mainMenuPage #drinks #wineBeer #beerImg {
+    display: block;
+    float: right;
+    width: 55vw;
+    height: 30vh;
+    object-fit: cover;
+  }
+  #mainMenuPage #drinks #nonAlc {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #mainMenuPage #drinks #nonAlc #teaImg {
+    display: none;
+  }
+  #mainMenuPage #drinks .topBtn {
+    grid-column: 2;
+    grid-row: 3;
+    left: 23vw;
+    justify-self: end;
+    align-self: center;
+  }
+  #mainMenuPage #food {
+    /*removes unnecessary white space at bottom*/
+    padding-bottom: 0;
+    /*creates some spacing between main food divs*/
+  }
+  #mainMenuPage #food #appies, #mainMenuPage #food #pizza, #mainMenuPage #food #pasta, #mainMenuPage #food #entrees {
+    padding-bottom: 7vh;
+  }
+  #mainMenuPage #food #appieImg {
+    position: relative;
+    bottom: 10vh;
+    width: 30vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  #mainMenuPage #food #pizzaMenuImgOne {
+    width: 30vw;
+  }
+  #mainMenuPage #food #pizzaMenuImgTwo {
+    width: 23vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  #mainMenuPage #food #pastaMenuImg {
+    width: 25vw;
+  }
+  #mainMenuPage #food #entreeImg {
+    width: 35vw;
+    height: 30vh;
+    object-fit: cover;
+  }
+  #mainMenuPage #food #foodTop {
+    position: relative;
+    left: 21vw;
+    bottom: 5vh;
+  }
+  #mainMenuPage #desserts {
+    padding: 0;
+  }
+  #mainMenuPage #desserts .menuItemsImg {
+    width: 20vw;
+    height: 40vh;
+    object-fit: cover;
+  }
+  #mainMenuPage #desserts #dessertsTop {
+    position: relative;
+    left: 21vw;
+    bottom: 6vh;
   }
   /**********CSS for about.html**********/
   #mainAbout {

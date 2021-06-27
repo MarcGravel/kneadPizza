@@ -317,6 +317,11 @@
                 margin-top: 3vh;
             }
 
+            /*Only visible on desktop*/
+            #beerImg, #landscapeDrinkImg {
+                display: none;
+            }
+
             #teaImg {
                 width: 280px;
                 margin-bottom: 4vh;
@@ -340,7 +345,7 @@
             }
 
             #appieImg{
-                width: 300px
+                width: 300px;
             }
 
             #pizzaMenuImgOne {

@@ -106,6 +106,10 @@ body {
   margin-left: 70vw;
 }
 
+#mainMenu #foodIntro {
+  display: none;
+}
+
 /*Global style for all main divs*/
 section h3 {
   color: #f3f3f3;

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/CSS/site.css">
 </head>
 <body>
+    <a id="topPage"></a>
     <header id="topNav">
         <a id="logoLink" href="index.html"><img id="logo" src="/Media/kneadIconWhite.png" alt="Knead Pizza Logo"></a>
         <!--Social icons only visible in this box on desktop-->
@@ -57,12 +58,18 @@
                 <li id="mainLiFood"><a id="mainAFood" href="#anchorFood">Food</a></li>
                 <li id="mainLiDesserts"><a id="mainADesserts" href="#anchorDesserts">Desserts</a></li>
             </ul>
+            <!--Only visible on desktop-->
+            <p id="foodIntro">
+                Knead Pizzas are made with only the freshest ingredients like mozzarella, 
+                roma tomatoes, made-from-scratch sauce and even features premium toppings like 
+                Sorriso Pepperoni, salami from Valbella Meats and a healthy Flax crust.
+            </p>
         </div>
         <section id="drinks">
             <a class="anchorHidden" id="anchorDrink" href="#"></a>
             <div id="cocktails">
                 <h1>Cocktails</h1>
-                <!--Image not visible on mobile-->
+                <!--Image not visible on mobile or desktop-->
                 <img class="menuItemsImg" id="cocktailImg" src="https://images.pexels.com/photos/4753648/pexels-photo-4753648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fresh made cocktails">
                 <h3>JUNGLE BIRD ... 14</h3>
                 <p>Blackstrap Rum, Campari, Pineapple, Lime</p>
@@ -72,6 +79,7 @@
                 <p>Cognac, Cointreau, Lemon</p>
                 <h3>OLD FASHIONED ... 16</h3>
                 <p>Bourbon, Demerara, Bitters</p>
+                <img class="menuItemsImg" id="landscapeDrinkImg" src="https://images.unsplash.com/photo-1591243315780-978fd00ff9db?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Sharing a toast">
             </div>
             <div id="wineBeer">
                 <h1 id="vinoTag">Vino & Birra</h1>
@@ -79,10 +87,12 @@
                 <p>Fresh and lively sparkling Cremant from the iconic Jura winemaker, Jean Bourdy. 100% Chardonnay made in the traditional Champagne method.</p>
                 <h3>TERRA MINUTA ... 14 / 32 / 60</h3>
                 <p>Easy drinking white made from Fiano Minutolo and Greco. Bottled without fining or filtration, this wine has notes of juicy tropical fruit and beautiful minerality.</p>
-                <!--Image not visible on mobile-->
+                <!--Image not visible on mobile or desktop-->
                 <img class="menuItemsImg" id="wineImg" src="https://images.pexels.com/photos/3933170/pexels-photo-3933170.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Selection of wines">
                 <h3>SCHMITT ROSE ... 15 / 34 / 65</h3>
                 <p>This is a fresh and racy rose best enjoyed chilled and in large quantities. Cherry, raspberry, all spice and liquorice with a savoury finish</p>
+                <!--Image only visible on desktop-->
+                <img class="menuItemsImg" id="beerImg" src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1059&q=80" alt="A lineup of fine beers">
                 <h3>PILSNER URQUELL ... 9</h3>
                 <p>16 ounce draught</p>
                 <h3>HOUSE BLONDE ... 7</h3>
@@ -92,7 +102,7 @@
             </div>
             <div id="nonAlc">
                 <h1>Non Alcolico</h1>
-                <!--Image not visible on mobile-->
+                <!--Image not visible on mobile or desktop-->
                 <img class="menuItemsImg" id="teaImg" src="https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Fresh tea leaves">
                 <h3>TEA ... 3</h3>
                 <p>Green, Earl Grey, Orange Pekoe, Peppermint</p>
@@ -104,7 +114,7 @@
                 <p>Orange, Apple, Cranberry</p>
             </div>
             <div class="topBtn">
-                <a class="backTopBtn" id="drinksTop" href="#">Back To Top</a>
+                <a class="backTopBtn" id="drinksTop" href="#topPage">Back To Top</a>
             </div>
         </section>
         <section id="food">
@@ -168,7 +178,7 @@
                 <P>7oz AAA with mixed mushroom, red wine & demi-glace</P>
             </div>
             <div class="topBtn">
-                <a class="backTopBtn" id="foodTop" href="#">Back To Top</a>
+                <a class="backTopBtn" id="foodTop" href="#topPage">Back To Top</a>
             </div>
         </section>
         <section id="desserts"> 
@@ -183,7 +193,7 @@
             <h3>TORTA DI FORMAGGIO E ARACHIDI ... 12</h3>
             <P>Peanut butter cheese cake, passion fruit coulis, strawberries</P>
             <div class="topBtn">
-                <a class="backTopBtn" id="dessertsTop" href="#">Back To Top</a>
+                <a class="backTopBtn" id="dessertsTop" href="#topPage">Back To Top</a>
             </div>
         </section>
     </main>
