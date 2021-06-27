@@ -182,16 +182,32 @@ since there are 20 photos we must go up in incraments of 5% to reach the 2000% w
   padding-bottom: 2vh;
 }
 
-#aboutUsArticle #kneadLogoAbout {
+#aboutUsArticle .pizImgStory {
   display: none;
 }
 
-#aboutUsArticle #chefKnead {
+#aboutUsArticle #pizImgCon {
   display: none;
 }
 
-#aboutUsArticle #chefContainer {
-  display: none;
+#aboutUsArticle #pizImgFinalCon {
+  background-color: rgba(24, 24, 24, 0.753);
+  display: grid;
+  grid-template-rows: 6fr 1fr;
+  width: 100%;
+  padding: 3vh 0 0 0;
+  margin: 3vh 0 1vh 0;
+  justify-items: center;
+  align-items: center;
+}
+
+#aboutUsArticle #pizImgFinalCon #pizImgFinal {
+  width: 90vw;
+  border-radius: 20px;
+}
+
+#aboutUsArticle #pizImgFinalCon p {
+  font-size: 0.8em;
 }
 
 #aboutUsArticle h1, #aboutUsArticle p {
@@ -210,41 +226,6 @@ since there are 20 photos we must go up in incraments of 5% to reach the 2000% w
 #aboutUsArticle #logoContainer #kneadLogoBtmPge {
   width: 30vw;
   max-width: 150px;
-}
-
-#aboutUsArticle #contactRedirect {
-  padding: 1vh 0 1vh 0;
-  margin-top: 5vh;
-  justify-self: center;
-  display: grid;
-  grid-template-rows: 1fr 3fr;
-  justify-items: center;
-  align-items: center;
-  border-top: 2px #dadada solid;
-}
-
-#aboutUsArticle #contactRedirect h3 {
-  grid-row: 1;
-  font-size: 1.6em;
-}
-
-#aboutUsArticle #contactRedirect #redirectBtns {
-  grid-row: 2;
-}
-
-#aboutUsArticle #contactRedirect #redirectBtns a {
-  border: 3px #dadada solid;
-  text-decoration: none;
-  font-size: 1.6em;
-  padding: 1vh 2vw 1vh 2vw;
-  margin-left: 4vw;
-  position: relative;
-  right: 2vw;
-  transform: scale(1);
-  transition: all 0.3s ease-out;
-}
-
-#aboutUsArticle #contactRedirect #redirectBtns a:hover {
-  background-color: #252525;
+  margin: 3vh 0 3vh 0;
 }
 /*# sourceMappingURL=mainAbout.css.map */
