@@ -107,6 +107,7 @@ body {
   width: 100vw;
   height: 3vh;
   display: grid;
+  grid-template-columns: 33% 33% 33%;
   justify-items: center;
   align-items: center;
   z-index: 3;
@@ -116,6 +117,36 @@ body {
 #phoneBox a:active, #phoneBox h2:active {
   color: #1212fc;
   transform: scale(1.1);
+}
+
+#phoneBox #phoneIcon {
+  justify-self: end;
+  position: relative;
+  right: 3vw;
+}
+
+#phoneBox #phoneIcon img {
+  width: 20px;
+}
+
+#phoneBox #phoneIconEnd {
+  grid-column: 3;
+  justify-self: start;
+  position: relative;
+  left: 3vw;
+}
+
+#phoneBox #phoneIconEnd img {
+  width: 20px;
+}
+
+@media screen and (max-width: 390px) {
+  #phoneBox #phoneIcon {
+    right: 10vw;
+  }
+  #phoneBox #phoneIconEnd {
+    left: 10vw;
+  }
 }
 
 /*creates line for hamgburger, is the label for the toggle checkbox*/
@@ -353,9 +384,13 @@ footer .topBtn .backTopBtn {
     /*Makes phone number none clickable*/
   }
   #phoneBox .phoneLink {
+    grid-column: 2;
     pointer-events: none;
     font-size: 1.6em;
     text-decoration: none;
+  }
+  #phoneBox #phoneIcon, #phoneBox #phoneIconEnd {
+    display: none;
   }
   /***********CSS for index.html***********/
   #mainHomePage {
@@ -826,7 +861,7 @@ footer .topBtn .backTopBtn {
   }
 }
 
-@media only screen and (min-width: 1100px) and (max-width: 1200px) {
+@media only screen and (min-width: 1100px) and (max-width: 1250px) {
   #topNav #headerNavBtns #homeNavBtn, #topNav #headerNavBtns #menuNavBtn {
     padding: 2vh 2vw 2vh 2vw;
   }

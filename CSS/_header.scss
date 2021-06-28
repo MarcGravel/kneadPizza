@@ -52,6 +52,7 @@
     width: 100vw;
     height: 3vh;
     display: grid;
+    grid-template-columns: 33% 33% 33%;
     justify-items: center;
     align-items: center;
     z-index: 3;
@@ -60,6 +61,38 @@
     a:active, h2:active {
         color: rgb(18, 18, 252);
         transform: scale(1.1);
+    }
+
+    #phoneIcon {
+        justify-self: end;
+        position: relative;
+        right: 3vw;
+
+        img {
+            width: 20px;
+        }
+    }
+
+    #phoneIconEnd {
+        grid-column: 3;
+        justify-self: start;
+        position: relative;
+        left: 3vw;
+
+        img {
+            width: 20px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        
+        #phoneIcon {
+            right: 10vw;
+        }
+
+        #phoneIconEnd {
+            left: 10vw;
+        }
     }
 }
   

@@ -64,11 +64,15 @@
 
         /*Makes phone number none clickable*/
         .phoneLink {
+            grid-column: 2;
             pointer-events: none;
             font-size: 1.6em;
             text-decoration: none;
         }
 
+        #phoneIcon, #phoneIconEnd {
+            display: none;
+        }
     }
 
     /***********CSS for index.html***********/

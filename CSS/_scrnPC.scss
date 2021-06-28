@@ -63,7 +63,7 @@
             }
 
             /*fixes button sizing to avoid overflow between 1100 and 1200px screen*/
-            @media only screen and (max-width: 1200px) {
+            @media only screen and (max-width: 1250px) {
                 #homeNavBtn, #menuNavBtn {
                     padding: 2vh 2vw 2vh 2vw;
                 }
