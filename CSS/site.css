@@ -377,7 +377,7 @@ footer .topBtn .backTopBtn {
   }
   #mainHomePage #mainMenu #pointDown {
     height: 15vh;
-    bottom: 2vh;
+    bottom: 10vh;
   }
   #mainHomePage #hmHrs {
     display: grid;
@@ -396,14 +396,14 @@ footer .topBtn .backTopBtn {
   #mainHomePage #hmHrs h1 {
     grid-column: 1;
     grid-row: 1;
-    width: 50vw;
+    width: fit-content;
     bottom: 0;
     font-size: 4em;
   }
   #mainHomePage #hmHrs p {
-    grid-column: 1;
+    grid-column: 1 / 3;
     grid-row: 2 / 3;
-    width: 50vw;
+    width: fit-content;
     font-size: 1.5em;
     left: 3vw;
     bottom: 0;
@@ -434,8 +434,18 @@ footer .topBtn .backTopBtn {
     object-fit: cover;
     z-index: 2;
   }
+  #mainHomePage #hmLoc {
+    /*adjusts positioning of anchor due to screen and content setting*/
+  }
   #mainHomePage #hmLoc h1 {
     font-size: 4em;
+  }
+  #mainHomePage #hmLoc #anchorLoc {
+    position: relative;
+    bottom: 15vh;
+  }
+  #mainHomePage #hmLoc #locAdrs {
+    font-size: 1.1em;
   }
   #mainHomePage #hmLoc #googleMap {
     height: 60vh;
@@ -665,7 +675,7 @@ footer .topBtn .backTopBtn {
   }
   #imgCarousel #selfCont {
     width: 1200%;
-    animation: 20s slider infinite;
+    animation: 70s slider infinite;
     /*Sets image size and squares all images*/
     /*displays extra image required to fill loop illusion*/
   }
@@ -851,7 +861,7 @@ footer .topBtn .backTopBtn {
   }
   #mainHomePage #mainMenu {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 3fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr;
     /*allows fonts to flow into colum 1 to avoid grid height overflow
             issues between 1100 and 1200px screen due to increaded font*/
     /*re sizes buttons to keep similar style as mobile and tablet once grid was reset*/
@@ -876,6 +886,8 @@ footer .topBtn .backTopBtn {
     grid-row: 3 / 5;
     justify-self: center;
     align-self: center;
+    position: relative;
+    bottom: 2vw;
     /*used to center items*/
     display: grid;
   }
@@ -903,18 +915,27 @@ footer .topBtn .backTopBtn {
   #mainHomePage #mainMenu #mainBtnsList {
     grid-row: 3 / 5;
     grid-column: 2;
+    align-self: center;
+    position: relative;
+    bottom: 4vh;
+    /*Adds hrs/res combo button and removes other buttons as divs are now
+                in the same location on the body*/
   }
-  #mainHomePage #mainMenu #mainBtnsList #mainLiHrs {
+  #mainHomePage #mainMenu #mainBtnsList #mainLiCombo {
+    display: block;
     margin-left: 20vw;
   }
+  #mainHomePage #mainMenu #mainBtnsList #mainLiHrs {
+    display: none;
+  }
   #mainHomePage #mainMenu #mainBtnsList #mainLiRes {
-    margin-left: 25vw;
+    display: none;
   }
   #mainHomePage #mainMenu #mainBtnsList #mainLiMen {
-    margin-left: 30vw;
+    margin-left: 25vw;
   }
   #mainHomePage #mainMenu #mainBtnsList #mainLiLoc {
-    margin-left: 35vw;
+    margin-left: 30vw;
   }
   #mainHomePage #mainMenu #mainBtnsList li:hover {
     transform: scale(1.05);
@@ -923,6 +944,122 @@ footer .topBtn .backTopBtn {
   #mainHomePage #mainMenu #mainBtnsList li:hover a:hover {
     transform: scale(1.1);
     transition: all 0.3s ease-in;
+  }
+  #mainHomePage #mainMenu #pointDown {
+    display: none;
+  }
+  #mainHomePage #desktopGrid {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+  }
+  #mainHomePage #desktopGrid #hmHrs {
+    grid-column: 1;
+    height: 30vh;
+  }
+  #mainHomePage #desktopGrid #hmHrs #anchorHrs {
+    position: relative;
+    bottom: 15vh;
+  }
+  #mainHomePage #desktopGrid #hmHrs h1 {
+    top: 2.5vh;
+    left: 3.5vw;
+  }
+  #mainHomePage #desktopGrid #hmHrs p {
+    position: relative;
+    left: 6vw;
+  }
+  #mainHomePage #desktopGrid #hmHrs #hrsImg, #mainHomePage #desktopGrid #hmHrs #wkDays, #mainHomePage #desktopGrid #hmHrs #wkEnds, #mainHomePage #desktopGrid #hmHrs #patio {
+    display: none;
+  }
+  #mainHomePage #desktopGrid #hmHrs #desktopScreenHrs {
+    grid-column: 1 / 3;
+    display: block;
+    position: relative;
+    top: 3vh;
+    left: 1vw;
+  }
+  #mainHomePage #desktopGrid #hmHrs #desktopScreenHrs #wkDaysLg, #mainHomePage #desktopGrid #hmHrs #desktopScreenHrs #wkEndsLg, #mainHomePage #desktopGrid #hmHrs #desktopScreenHrs #patioLg {
+    padding-bottom: 2vh;
+  }
+  #mainHomePage #desktopGrid #centerDeskImgCont #centerDeskImg {
+    display: block;
+    grid-column: 2;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+  #mainHomePage #desktopGrid #hmCon {
+    grid-column: 3;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    height: 30vh;
+  }
+  #mainHomePage #desktopGrid #hmCon #anchorCon {
+    display: none;
+  }
+  #mainHomePage #desktopGrid #hmCon h1 {
+    width: fit-content;
+  }
+  #mainHomePage #desktopGrid #hmCon p {
+    width: fit-content;
+    font-size: 1.5em;
+    justify-self: end;
+  }
+  #mainHomePage #desktopGrid #hmCon a {
+    width: fit-content;
+    font-size: 1.5em;
+    position: relative;
+    left: 1vw;
+  }
+  #mainHomePage #desktopGrid #hmCon #socialContact {
+    grid-area: 4 / 2;
+    right: 0;
+  }
+  #mainHomePage #desktopGrid #hmCon #socialContact a img {
+    width: 30px;
+    padding: 0 2vw 0 0;
+  }
+  #mainHomePage #desktopGrid #hmLoc {
+    grid-column: 1 / 4;
+    grid-template-columns: 1fr 1fr;
+  }
+  #mainHomePage #desktopGrid #hmLoc #locAdrs {
+    display: none;
+  }
+  #mainHomePage #desktopGrid #hmLoc #googleMap {
+    grid-row: 3;
+    grid-column: 1;
+    height: 60vh;
+    width: 40vw;
+  }
+  #mainHomePage #desktopGrid #hmLoc #directLoc {
+    display: block;
+    grid-area: 3 / 2;
+    text-align: center;
+    align-self: center;
+  }
+  #mainHomePage #desktopGrid #hmLoc #directLoc h2 {
+    font-size: 3em;
+    font-family: 'lobster', cursive;
+    font-weight: lighter;
+  }
+  #mainHomePage #desktopGrid #hmLoc #directLoc .locationLogo {
+    width: 50px;
+    padding: 3vh 0 3vh 0;
+  }
+  #mainHomePage #desktopGrid #hmLoc #directLoc #locationInfo p {
+    padding-bottom: 1vh;
+    font-size: 2em;
+  }
+  #mainHomePage #desktopGrid #hmLoc #directLoc #exactLoc {
+    padding: 0 10vw 1vh 10vw;
+    font-size: 1.6em;
+  }
+  #mainHomePage #hmImg #vidIntro, #mainHomePage #hmImg #imgIntro, #mainHomePage #hmImg #pizzaVid {
+    display: none;
+  }
+  #mainHomePage #hmImg #imgGallery {
+    padding-top: 10vh;
   }
   /**********CSS for menu.html**********/
   #mainMenuPage #mainMenu {

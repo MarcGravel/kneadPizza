@@ -10,7 +10,7 @@ body{
 /*Adjusts anchor scroll due to fixed nav bar postiion*/
 .anchorHidden {
     position: relative;
-    bottom: 12vh;
+    bottom: 13vh;
     left: 5vw;
     width: 10vw;
     visibility: hidden;
@@ -74,8 +74,13 @@ body{
             text-decoration: none;
         }
 
+        /*li item only viewable from desktop*/
+        #mainLiCombo {
+            display: none;
+        }
+
         /*sets padding on a-tag to fill parent element li*/
-        #mainAHrs, #mainARes, #mainAMen, #mainALoc  {
+        #mainAHrs, #mainARes, #mainAMen, #mainALoc, #mainACombo  {
             padding-top: 2vh;
             padding-bottom: 2vh;
             display: block;
@@ -130,7 +135,7 @@ body{
         position: relative;
         left: 3vw;
         bottom: 1.5vh;
-        width: 20vw;
+        width: fit-content;
     }
 
     p {
@@ -146,6 +151,16 @@ body{
     #hrsImg {
         display: none;
     }
+
+    /*display of hours for large screen when contact div is located beside*/
+    #desktopScreenHrs {
+        display: none;
+    }
+}
+
+/*Image for desktop version only*/
+#centerDeskImg {
+    display: none;
 }
 
 /*Location div*/
@@ -154,6 +169,7 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     display: grid;
     grid-template-rows: 1% 10% 89%;
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 5vh;
 
     #anchorLoc {
@@ -164,16 +180,38 @@ body{
         grid-row: 2;
         position: relative;
         left: 3vw;
-        width: 60vw;
+        width: fit-content;
+    }
+
+    /*smaller font size for h1 here when screen is very small to avoid overflow of grid item*/
+    @media only screen and (max-width: 380px) {
+        h1 {
+            font-size: 2.1em;
+        }
+
+    }
+
+    #locAdrs {
+        grid-area: 2 / 2;
+        align-self: end;
+        font-size: 0.8em;
+        text-align: center;
+        padding: 1vh 3vw 0 3vw;
     }
 
     #googleMap {
         grid-row: 3 / 4;
+        grid-column: 1 / 3;
         justify-self: center;
         align-self: center;
         padding-top: 2vh;
         width: 90vw;
         height: 50vh;
+    }
+
+    /*address and directions div*/
+    #directLoc {
+        display: none;
     }
 }
 
@@ -187,14 +225,14 @@ body{
     align-items: center;
 
     #anchorCon {
-        bottom: 15vh;
+        bottom: 16vh;
     }
 
     h1 {
         grid-area: 1 / 1;
         position: relative;
         left: 3vw;
-        width: 35vw;
+        width: fit-content;
     }
 
     p {

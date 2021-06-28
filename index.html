@@ -68,6 +68,9 @@
                 </iframe>
             </div>
             <ul id="mainBtnsList">
+                <!--first list item only viewable from desktop due to page structure
+                mainAHrs and mainARes not viewable from desktop-->
+                <li id="mainLiCombo"><a id="mainACombo" href="#anchorHrs">Hours & Contact</a></li>
                 <li id="mainLiHrs"><a id="mainAHrs" href="#anchorHrs">Hours</a></li>
                 <li id="mainLiRes"><a id="mainARes" href="#anchorCon">Reserve</a></li>
                 <li id="mainLiMen"><a id="mainAMen" href="menu.html">Menu</a></li>
@@ -75,47 +78,76 @@
             </ul>
             <img id="pointDown" src="/Media/favpng_green-arrow-clip-art.png" alt="Down Arrow">
         </section>
-        <section id="hmHrs">
-            <a class="anchorHidden" id="anchorHrs" href="#">a</a>
-            <h1>Hours</h1>
-            <p id="wkDays">
-                Mon-thurs .. 4pm - 12am
-            </p>
-            <p id="wkEnds">
-                Fri-Sun .. 4pm - 2am
-            </p>
-            <p id="patio">
-                Patio .. Daily 4pm - 11pm
-            </p>
-            <!--Visible in tablet and PC only-->
-            <img id="hrsImg" src="https://images.unsplash.com/photo-1579752284549-71eb9dd09f4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Italy Riverside">
-        </section>
-        <section id="hmLoc">
-            <a class="anchorHidden" id="anchorLoc" href="#"></a>
-            <h1>Find us here</h1>
-            <iframe 
-                id="googleMap"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.7149466556493!2d-113.97498327591137!3d50.70646655298439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x506fc1eefe385498!2sPizza%20Hut%20Okotoks!5e0!3m2!1sen!2sca!4v1624249986357!5m2!1sen!2sca" 
-                alt="Google Map Location" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </section>
-        <section id="hmCon">
-            <a class="anchorHidden" id="anchorCon" href="#"></a>
-            <h1>Contact</h1>
-            <p id="phoneLabel">Phone:</p>
-            <p id="emailLabel">Email:</p>
-            <p id="socialLabel">Social:</p>
-            <a class="phoneLink" id="phoneBtn" href="tel:14035553641">403.555.3641</a>
-            <a id="mailBtn" href="mailto:info@kneadpizza.com">info@kneadpizza.com</a>
-            <div id="socialContact">
-                <a href="https://www.facebook.com"><img src="/Media/facebookIcon.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com"><img src="/Media/InstagramIcon.png" alt="Instagram"></a>
-                <a href="https://www.twitter.com"><img src="/Media/twitterIcon.png" alt="Twitter"></a>
-                <a href="https://www.pinterest.ca"><img src="/Media/pintrestIcon.png" alt="Pintrest"></a>
+        <section id="desktopGrid">
+            <section id="hmHrs">
+                <a class="anchorHidden" id="anchorHrs">a</a>
+                <h1>Hours</h1>
+                <p id="wkDays">
+                    Mon-thurs .. 4pm - 12am
+                </p>
+                <p id="wkEnds">
+                    Fri-Sun .. 4pm - 2am
+                </p>
+                <p id="patio">
+                    Patio .. Daily 4pm - 11pm
+                </p>
+                <div id="desktopScreenHrs">
+                    <p id="wkDaysLg">
+                        Mon-thurs: 4pm - 12am
+                    </p>
+                    <p id="wkEndsLg">
+                        Fri-Sun: 4pm - 2am
+                    </p>
+                    <p id="patioLg">
+                        Patio: Daily 4pm - 11pm
+                    </p>
+                </div>
+                <!--Visible in tablet only-->
+                <img id="hrsImg" src="https://images.unsplash.com/photo-1579752284549-71eb9dd09f4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Italy Riverside">
+            </section>
+            <!--Visible ion desktop only for center of grid-->
+            <div id="centerDeskImgCont">
+                <img id="centerDeskImg" src="https://images.unsplash.com/photo-1579752284549-71eb9dd09f4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80" alt="Italy Riverside">
             </div>
+            <section id="hmLoc">
+                <a class="anchorHidden" id="anchorLoc"></a>
+                <h1>Find us here</h1>
+                <p id="locAdrs">200 Southridge Drive, Okotoks, AB. T1S 0N8</p>
+                <iframe 
+                    id="googleMap"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2124.7149466556493!2d-113.97498327591137!3d50.70646655298439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x506fc1eefe385498!2sPizza%20Hut%20Okotoks!5e0!3m2!1sen!2sca!4v1624249986357!5m2!1sen!2sca" 
+                    alt="Google Map Location" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+                <div id="directLoc">
+                    <h2>Knead Pizza</h2>
+                    <img class="locationLogo" src="/Media/kneadIconWhite.png" alt="Knead Pizza Logo">
+                    <div id="locationInfo">
+                        <p>200 Southridge Dr</p>
+                        <p>Okotoks, AB</p>
+                        <p>T1S 0N8</p>
+                    </div>
+                    <img class="locationLogo" src="/Media/kneadIconWhite.png" alt="Knead Pizza Logo">
+                    <p id="exactLoc">Located in the Southridge shopping center right off the 2A highway.</p>
+                </div>
+            </section>
+            <section id="hmCon">
+                <a class="anchorHidden" id="anchorCon" href="#"></a>
+                <h1>Contact</h1>
+                <p id="phoneLabel">Phone:</p>
+                <p id="emailLabel">Email:</p>
+                <p id="socialLabel">Social:</p>
+                <a class="phoneLink" id="phoneBtn" href="tel:14035553641">403.555.3641</a>
+                <a id="mailBtn" href="mailto:info@kneadpizza.com">info@kneadpizza.com</a>
+                <div id="socialContact">
+                    <a href="https://www.facebook.com"><img src="/Media/facebookIcon.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="/Media/InstagramIcon.png" alt="Instagram"></a>
+                    <a href="https://www.twitter.com"><img src="/Media/twitterIcon.png" alt="Twitter"></a>
+                    <a href="https://www.pinterest.ca"><img src="/Media/pintrestIcon.png" alt="Pintrest"></a>
+                </div>
+            </section>
         </section>
         <section id="hmImg">
             <h1>Check us out</h1>
