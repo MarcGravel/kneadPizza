@@ -261,23 +261,23 @@ footer {
   grid-template-rows: repeat(4, 1fr);
   /*Sets position of footer elements*/
   /*Sets top of page button*/
-}
-
-footer #privPol, footer #cpyRit {
-  position: relative;
-  left: 5vw;
+  /*adjusts back-to-top button size to avoid overflow on very narrow screens */
 }
 
 footer #privPol {
   width: 50vw;
   grid-row: 2;
   bottom: 1vh;
+  position: relative;
+  left: 5vw;
 }
 
 footer #cpyRit {
   font-size: 0.8em;
   grid-row: 3;
   width: 80vw;
+  position: relative;
+  left: 6vw;
 }
 
 footer .topBtn {
@@ -291,6 +291,16 @@ footer .topBtn .backTopBtn {
   text-decoration: none;
   border: 3px #dadada solid;
   padding: 8px;
+}
+
+@media screen and (max-width: 350px) {
+  footer .topBtn {
+    left: 70vw;
+  }
+  footer .topBtn .backTopBtn {
+    font-size: 0.6em;
+    padding: 4px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -750,6 +760,9 @@ footer .topBtn .backTopBtn {
   }
   footer #cpyRit {
     font-size: 1.4em;
+  }
+  footer .topBtn {
+    left: 70vw;
   }
   footer .topBtn .backTopBtn {
     font-size: 1.5em;
@@ -1331,6 +1344,20 @@ footer .topBtn .backTopBtn {
     max-width: 700px;
     max-height: 400px;
     object-fit: cover;
+  }
+  /**********Footer**********/
+  footer #privPol {
+    font-size: 2.1em;
+  }
+  footer #cpyRit {
+    font-size: 1.7em;
+  }
+  footer .topBtn {
+    left: 77vw;
+  }
+  footer .topBtn .backTopBtn {
+    font-size: 1.7em;
+    padding: 2vh 2vw 2vh 2vw;
   }
 }
 /*# sourceMappingURL=site.css.map */

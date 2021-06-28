@@ -8,21 +8,20 @@ footer {
     grid-template-rows: repeat(4, 1fr);
 
     /*Sets position of footer elements*/
-    #privPol, #cpyRit {
-        position: relative;
-        left: 5vw;
-    }
-
     #privPol {
         width: 50vw;
         grid-row: 2;
         bottom: 1vh;
+        position: relative;
+        left: 5vw;
     }
 
     #cpyRit {
         font-size: 0.8em;
         grid-row: 3;
         width: 80vw;
+        position: relative;
+        left: 6vw;
     }
 
     /*Sets top of page button*/
@@ -36,6 +35,18 @@ footer {
             text-decoration: none;
             border: 3px #dadada solid;
             padding: 8px;
+        }
+    }
+
+    /*adjusts back-to-top button size to avoid overflow on very narrow screens */
+    @media screen and (max-width: 350px) {
+        .topBtn {
+            left: 70vw;
+    
+            .backTopBtn {
+                font-size: 0.6em;
+                padding: 4px;
+            }
         }
     }
 }
