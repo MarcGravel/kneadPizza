@@ -622,44 +622,16 @@
         Since we now want 4 images on the screen at once, images will drop from 90vw
         to 20vw. This means we can cut the total width of the carousel container down 
         by 4x. from 2000% to 500%. But we need to add the 3 extra starting images to compelete
-        a smooth loop. Total width for container needs to be 800%. There will only need 
+        a smooth loop so the total width for container needs to be 800%. There will only need 
         to be 5 transitions in the keyframes instead of 20 originally or 10 on tablet*/
         @keyframes slider {
-            0% {
-                left: 0;
-            }
-            10% {
-                left: 0;
-            }
-            20% {
-                left: -100%
-            }
-            30% {
-                left: -100%
-            }        
-            40% {
-                left: -200%
-            }
-            50% {
-                left: -200%
-            }
-            60% {
-                left: -300%
-            }
-            70% {
-                left: -300%
-            }
-            80% {
-                left: -400%
-            }
-            90% {
-                left: -400%
-            }
+            0%, 10% {left: 0;}
+            20%, 30% {left: -100%}      
+            40%, 50% {left: -200%}
+            60%, 70% {left: -300%}
+            80%, 90% {left: -400%}
             /* the extra 2% helps smooth final snap due to margins between photos*/
-            100% {
-                left: -502%
-            }
-
+            100% {left: -502%}
         }
 
         /*Carousel positioning*/

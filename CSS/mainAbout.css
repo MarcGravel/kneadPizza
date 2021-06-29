@@ -7,132 +7,72 @@ body {
   top: 13vh;
 }
 
-/*animation for imgCarousel. doubling values at 
-different % throughout animation keeps the images still for a bit before
+/*animation for imgCarousel. Multiple animation percentages on single line
+(ie: 0%, 3%) pauses the animation at its left position between the animation
+percentage values. This allows for the images to sit still for a bit before
 changing to next image. Also, first and last images in html are the same 
 so once this animation reaches 100% at the last image and resets, 
-the image is the same. gives the illusion of continuous infinit loop
-
-since there are 20 photos we must go up in incraments of 5% to reach the 2000% width*/
+the image is the same. This gives the illusion of continuous infinit loop.
+Since there are 20 photos we must go up in increments of 5% to reach the 2000% width*/
 @keyframes slider {
-  0% {
+  0%, 3% {
     left: 0;
   }
-  3% {
-    left: 0;
-  }
-  5% {
+  5%, 7% {
     left: -100%;
   }
-  7% {
-    left: -100%;
-  }
-  10% {
+  10%, 13% {
     left: -200%;
   }
-  13% {
-    left: -200%;
-  }
-  15% {
+  15%, 17% {
     left: -300%;
   }
-  17% {
-    left: -300%;
-  }
-  20% {
+  20%, 23% {
     left: -400%;
   }
-  23% {
-    left: -400%;
-  }
-  25% {
+  25%, 27% {
     left: -500%;
   }
-  27% {
-    left: -500%;
-  }
-  30% {
+  30%, 33% {
     left: -600%;
   }
-  33% {
-    left: -600%;
-  }
-  35% {
+  35%, 37% {
     left: -700%;
   }
-  37% {
-    left: -700%;
-  }
-  40% {
+  40%, 43% {
     left: -800%;
   }
-  43% {
-    left: -800%;
-  }
-  45% {
+  45%, 47% {
     left: -900%;
   }
-  47% {
-    left: -900%;
-  }
-  50% {
+  50%, 53% {
     left: -1000%;
   }
-  53% {
-    left: -1000%;
-  }
-  55% {
+  55%, 57% {
     left: -1100%;
   }
-  57% {
-    left: -1100%;
-  }
-  60% {
+  60%, 63% {
     left: -1200%;
   }
-  63% {
-    left: -1200%;
-  }
-  65% {
+  65%, 67% {
     left: -1300%;
   }
-  67% {
-    left: -1300%;
-  }
-  70% {
+  70%, 73% {
     left: -1400%;
   }
-  73% {
-    left: -1400%;
-  }
-  75% {
+  75%, 77% {
     left: -1500%;
   }
-  77% {
-    left: -1500%;
-  }
-  80% {
+  80%, 83% {
     left: -1600%;
   }
-  83% {
-    left: -1600%;
-  }
-  85% {
+  85%, 87% {
     left: -1700%;
   }
-  87% {
-    left: -1700%;
-  }
-  90% {
+  90%, 93% {
     left: -1800%;
   }
-  93% {
-    left: -1800%;
-  }
-  95% {
-    left: -1900%;
-  }
-  97% {
+  95%, 97% {
     left: -1900%;
   }
   100% {

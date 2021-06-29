@@ -415,75 +415,23 @@
     /*keyframes need to be adjusted down to left: -1000% at 100% animation. 
     Since we now want 2 images on the screen at once, images will drop from 90vw
     to 40vw. This means we can cut the total width of the carousel container down 
-    by 2x. from 2000% to 1000%. But we need to add the 3 extra starting images to compelete
-    a smooth loop. Total width for container needs to be 1100%. There will only need 
+    by 2x. from 2000% to 1000%. But we need to add the one extra starting image to compelete
+    a smooth loop so total width for container needs to be 1200%. There will only need 
     to be 10 transitions in the keyframes instead of 20 originally
-    Since there are 20 photos and 2 photos per slide we must go up in incraments of 10% to reach the 2000% width*/
+    Since there are 20 photos and 2 photos per slide we must go up in increments of 10% to reach the 1200% width*/
     @keyframes slider {
-        0% {
-            left: 0;
-        }
-        5% {
-            left: 0;
-        }
-        10% {
-            left: -100%;
-        }
-        15% {
-            left: -100%;
-        }
-        20% {
-            left: -200%;
-        }
-        25% { 
-            left: -200%;
-        }
-        30% {
-            left: -300%;
-        }
-        35% {
-            left: -300%;
-        }
-        40% {
-            left: -400%;
-        }
-        45% {
-            left: -400%;
-        }
-        50% {
-            left: -500%;
-        }
-        55% {
-            left: -500%;
-        }
-        60% {
-            left: -600%;
-        }
-        65% {
-            left: -600%;
-        }
-        70% {
-            left: -700%;
-        }
-        75% {
-            left: -700%;
-        }
-        80% {
-            left: -800%;
-        }
-        85% {
-            left: -800%;
-        }
-        90% {
-            left: -900%;
-        }
-        95% {
-            left: -900%;
-        }
+        0%, 5% {left: 0;}
+        10%, 15% {left: -100%;}
+        20%, 25% {left: -200%;}
+        30%, 35% {left: -300%;}
+        40%, 45% {left: -400%;}
+        50%, 55% {left: -500%;}
+        60%, 65% {left: -600%;}
+        70%, 75% {left: -700%;}
+        80%, 85% {left: -800%;}
+        90%, 95% {left: -900%;}
         /* the extra 2% helps smooth final snap due to margins between photos*/
-        100% {
-            left: -1002%;
-        }
+        100% {left: -1002%;}
     }
 
     /*Carousel positioning, sets width of viewable area and moves carousel to the center due to margin spacing between photos*/
