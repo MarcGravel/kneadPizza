@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 footer {
     position: relative;
     top: 13vh;
@@ -33,7 +35,7 @@ footer {
 
         .backTopBtn {
             text-decoration: none;
-            border: 3px #dadada solid;
+            border: 3px $siteWhite solid;
             padding: 8px;
         }
     }

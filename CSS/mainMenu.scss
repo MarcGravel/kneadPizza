@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 body{ 
     overflow-x: hidden;
 }
@@ -26,7 +28,7 @@ body{
 
     .backTopBtn {
         text-decoration: none;
-        border: 3px #dadada solid;
+        border: 3px $siteWhite solid;
         padding: 10px;
     }
 }
@@ -75,7 +77,7 @@ body{
             margin-top: 3vh;
             text-align: center;
             list-style: none;
-            border: 2px #dadada solid;
+            border: 2px $siteWhite solid;
 
             &:active {
                 background-color: rgba(0, 0, 0, 0.527);

@@ -1,44 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #dadada;
-}
-
-/*Smooths scroll when clicking anchor tags, eliminates horizontal scrolling*/
-html {
-  scroll-behavior: smooth;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-h1 {
-  font-family: 'Lobster', cursive;
-  font-size: 2.5em;
-  font-weight: lighter;
-}
-
-p {
-  font-size: 1.1em;
-}
-
-body {
-  background-image: url(/Media/italyblur.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-/*Global CSS for all back to top buttons on site*/
-.topBtn {
-  /*background needs to be lighter here due to div background color*/
-}
-
-.topBtn .backTopBtn:active {
-  background-color: rgba(15, 15, 15, 0.925);
-}
-
-.topBtn #foodTop:active {
-  background-color: #535353;
 }
 
 #topNav {
@@ -161,7 +125,7 @@ body {
   border-top: 8px transparent;
   border-bottom: 8px transparent;
   border-radius: 15px;
-  background-color: #dadada;
+  background-color: #f4f5f0;
   cursor: pointer;
   z-index: 5;
   /*creates top and bottom line for hamburger. also creates transition animation*/
@@ -173,7 +137,6 @@ body {
   content: '';
   width: 50px;
   height: 8px;
-  background-color: #dadada;
   border-radius: 9px;
   grid-column: 3;
   display: block;
@@ -182,11 +145,13 @@ body {
 }
 
 #hamburger::before {
+  background-color: #008c45;
   top: -16px;
   transform-origin: left top;
 }
 
 #hamburger::after {
+  background-color: #cd212a;
   top: 8px;
   transform-origin: left bottom;
 }
@@ -198,13 +163,13 @@ body {
 
 /*sets top color and roation position on click*/
 #toggle:checked ~ label::before {
-  background-color: #aa2323;
+  background-color: #cd212a;
   transform: rotate(43deg);
 }
 
 /*sets bottom color and roation position on click*/
 #toggle:checked ~ label::after {
-  background-color: #aa2323;
+  background-color: #cd212a;
   transform: rotate(-43deg);
 }
 
@@ -835,7 +800,6 @@ footer .topBtn .backTopBtn {
   #topNav #headerNavBtns .navBtns {
     margin-left: 1vw;
     text-align: center;
-    border: 2px #dadada solid;
     height: fit-content;
   }
   #topNav #headerNavBtns .navBtns:hover {
@@ -851,11 +815,18 @@ footer .topBtn .backTopBtn {
   #topNav #headerNavBtns a:hover {
     transform: scale(1.1);
   }
-  #topNav #headerNavBtns #homeNavBtn, #topNav #headerNavBtns #menuNavBtn {
+  #topNav #headerNavBtns #homeNavBtn {
+    border: 2px #008c45 solid;
+    padding: 2vh 3vw 2vh 3vw;
+    display: inline-block;
+  }
+  #topNav #headerNavBtns #menuNavBtn {
+    border: 2px #f4f5f0 solid;
     padding: 2vh 3vw 2vh 3vw;
     display: inline-block;
   }
   #topNav #headerNavBtns #aboutNavBtn {
+    border: 2px #cd212a solid;
     padding: 2vh 3vw 2vh 3vw;
     display: inline-block;
   }
@@ -1165,7 +1136,7 @@ footer .topBtn .backTopBtn {
     position: relative;
     right: 10vw;
     bottom: 5vh;
-    border-left: 8px #f81313b2 solid;
+    border-left: 8px #cd212a solid;
     border-radius: 50px;
     padding-left: 3vw;
     background-color: rgba(0, 0, 0, 0.39);
@@ -1394,5 +1365,41 @@ footer .topBtn .backTopBtn {
     font-size: 1.7em;
     padding: 2vh 2vw 2vh 2vw;
   }
+}
+
+/*Smooths scroll when clicking anchor tags, eliminates horizontal scrolling*/
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 2.5em;
+  font-weight: lighter;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+body {
+  background-image: url(/Media/italyblur.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*Global CSS for all back to top buttons on site*/
+.topBtn {
+  /*background needs to be lighter here due to div background color*/
+}
+
+.topBtn .backTopBtn:active {
+  background-color: rgba(15, 15, 15, 0.925);
+}
+
+.topBtn #foodTop:active {
+  background-color: #535353;
 }
 /*# sourceMappingURL=site.css.map */
