@@ -303,7 +303,7 @@
 
             #hmCon {
                 grid-column: 3;
-                grid-template-columns: 1fr 2.5fr;
+                grid-template-columns: 1fr 2fr;
                 grid-template-rows: 2fr 1fr 1fr 1fr;
                 height: 30vh;
 
@@ -313,10 +313,13 @@
 
                 h1 {
                     width: fit-content;
+                    grid-column: 1 / 3;
+                    justify-self: start;
                 }
 
                 p {
                     width: fit-content;
+                    margin-left: 5vw;
                     font-size: 1.5em;
                     justify-self: end;
                 }
@@ -325,7 +328,7 @@
                     width: fit-content;
                     font-size: 1.5em;
                     position: relative;
-                    left: 1vw;
+                    left: 2vw;
                 }
 
                 #socialContact {
