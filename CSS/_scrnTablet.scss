@@ -38,27 +38,15 @@
 
         #toggle:checked ~ label::after {
             transform: rotate(-36deg)
-        } 
-
-        /*Screen Overlay postion adjustment and button sizing*/
+        }
+        
         #overMenu {
-            top: 20vh;
-            left: 28vw;
 
-            li {
-                margin: 100px 0px; 
+            a {
+                position: relative;
+                right: 4vw;
             }
-     
-            li a {
-                 font-size: 4.5em;
-                 padding: 70px;
-     
-                 /*after create white elements to act as hover buttons for a tags*/
-                 &::after {
-                     height: 80px;
-                }
-            } 
-        }   
+        }
     }
 
     #phoneBox {

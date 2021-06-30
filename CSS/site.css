@@ -187,64 +187,88 @@
 /*sets position, size, and gradient of overlay*/
 #smScrnOverlay {
   position: fixed;
-  width: 200%;
-  height: 200%;
-  border-bottom-left-radius: 50%;
-  background-image: linear-gradient(to right top, #aaa9a9, #7e8081, #6a6b6b, #2c2c2c, #000000);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(32, 32, 32, 0.8);
   /*animation from top corner on click, transform:scale used as 0 will hide element and 1 will have it appear*/
   transform: scale(0);
   transform-origin: top right;
-  transition: all 0.6s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#smScrnOverlay #menuContainerHalf {
+  grid-column: 2;
+  background-color: #dfdfdf;
+  display: grid;
+  grid-template-rows: 2fr 5fr 5fr;
   /*aligns list in overlay*/
 }
 
-#smScrnOverlay #overMenu {
+#smScrnOverlay #menuContainerHalf #overMenu {
+  height: fit-content;
+  grid-row: 2;
   list-style: none;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  top: 27vh;
-  left: 26vw;
+  /*Adds a top border only on top list item to avoid overlapping borders*/
 }
 
-#smScrnOverlay #overMenu li {
-  margin: 50px 0px;
+#smScrnOverlay #menuContainerHalf #overMenu li {
+  padding: 2vh 0 2vh 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(244, 245, 240, 0.6);
+  border-bottom: 2px black solid;
 }
 
-#smScrnOverlay #overMenu li a {
-  color: white;
+#smScrnOverlay #menuContainerHalf #overMenu #topLiOverlay {
+  border-top: 2px black solid;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu a {
   text-decoration: none;
-  font-size: 2.5em;
-  font-weight: 500;
-  padding: 30px;
-  /*this position sets sizing for button bars in the :after*/
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 0 20% 0 3vw;
+  margin-left: 3vw;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu #overlayHome {
+  border-left: 6px rgba(0, 140, 69, 0.6) solid;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu #overlayMenu {
+  border-left: 6px white solid;
+  padding: 0 22% 0 3vw;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu #overlayAbout {
+  border-left: 6px rgba(205, 33, 42, 0.7) solid;
+}
+
+#smScrnOverlay #menuContainerHalf #logoOverlay {
+  grid-row: 3;
+  width: 200px;
+  justify-self: center;
+  align-self: center;
   position: relative;
-  /*after create white elements to act as hover buttons for a tags*/
-  /*button press*/
-}
-
-#smScrnOverlay #overMenu li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  height: 50px;
-  width: 100%;
-  background: transparent;
-  border-radius: 50px;
-  box-shadow: 1px 4px rgba(255, 250, 250, 0.514);
-  z-index: -1;
-}
-
-#smScrnOverlay #overMenu li a:active:after {
-  background-image: linear-gradient(to left bottom, #313131, #3e3e3f, #575a5a, #656867, #868685);
-  box-shadow: none;
-  transition: all 0.3s ease-out;
+  bottom: 10vh;
 }
 
 /*Make menu appear on hamburger click*/
 #toggle:checked ~ #smScrnOverlay {
   transform: scale(1);
+}
+
+@media only screen and (min-width: 1100px) {
+  #smScrnOverlay {
+    display: none;
+  }
 }
 
 footer {
@@ -303,7 +327,6 @@ footer .topBtn .backTopBtn {
   /***********CSS for Header***********/
   #topNav {
     /*Hamburger sizing and animation adjustment*/
-    /*Screen Overlay postion adjustment and button sizing*/
   }
   #topNav #logoLink #logo {
     width: 90px;
@@ -329,20 +352,9 @@ footer .topBtn .backTopBtn {
   #topNav #toggle:checked ~ label::after {
     transform: rotate(-36deg);
   }
-  #topNav #overMenu {
-    top: 20vh;
-    left: 28vw;
-  }
-  #topNav #overMenu li {
-    margin: 100px 0px;
-  }
-  #topNav #overMenu li a {
-    font-size: 4.5em;
-    padding: 70px;
-    /*after create white elements to act as hover buttons for a tags*/
-  }
-  #topNav #overMenu li a::after {
-    height: 80px;
+  #topNav #overMenu a {
+    position: relative;
+    right: 4vw;
   }
   #phoneBox {
     height: 5vh;
