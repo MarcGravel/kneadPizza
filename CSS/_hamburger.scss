@@ -100,12 +100,36 @@
             list-style: none;
 
             li {
-                padding: 2vh 0 2vh 0;
-                display: grid;
-                justify-items: center;
-                align-items: center;
                 background-color: $flagColorWhite;
                 border-bottom: 2px black solid;
+
+                a {
+                    display: block;
+                    padding: 2vh 0 2vh 5vw;
+                    font-size: 3em;
+                    text-decoration: none;
+
+                    span {
+                        font-family: $siteRegFont;
+                        font-weight: bold;
+                        border-radius: 25px;
+                        padding-left: 2.5vw;
+                        color: black;
+                    }
+
+                    #overlayHome {
+                        border-left: 6px $flagColorGreen solid;
+                    }
+
+                    #overlayMenu {
+                        border-left: 6px white solid;
+                        padding-left: 3vw;
+                    }
+
+                    #overlayAbout {
+                        border-left: 6px $flagColorRed solid;
+                    }
+                } 
             }
 
             /*Adds a top border only on top list item to avoid overlapping borders*/
@@ -113,39 +137,17 @@
             {
                 border-top: 2px black solid;
             }
-
-            a {
-                text-decoration: none;
-                color: black;
-                font-size: 3em;
-                font-weight: bold;
-                border-top-left-radius: 30px;
-                border-bottom-left-radius: 30px;
-                padding: 0 20% 0 3vw;
-                margin-left: 3vw;
-            } 
-
-            #overlayHome {
-                border-left: 6px $flagColorGreen solid;
-            }
-
-            #overlayMenu {
-                border-left: 6px white solid;
-                padding: 0 22% 0 3vw;
-            }
-
-            #overlayAbout {
-                border-left: 6px $flagColorRed solid;
-            }
         }
 
         #logoOverlay {
             grid-row: 3;
-            width: 200px;
+            width: 40vw;
+            min-width: 200px;
+            max-width: 340px;
             justify-self: center;
             align-self: center;
             position: relative;
-            bottom: 10vh;
+            bottom: 5vh;
         }
     }
 

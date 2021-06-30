@@ -215,49 +215,51 @@
 }
 
 #smScrnOverlay #menuContainerHalf #overMenu li {
-  padding: 2vh 0 2vh 0;
-  display: grid;
-  justify-items: center;
-  align-items: center;
   background-color: rgba(244, 245, 240, 0.6);
   border-bottom: 2px black solid;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu li a {
+  display: block;
+  padding: 2vh 0 2vh 5vw;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu li a span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-radius: 25px;
+  padding-left: 2.5vw;
+  color: black;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu li a #overlayHome {
+  border-left: 6px rgba(0, 140, 69, 0.6) solid;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu li a #overlayMenu {
+  border-left: 6px white solid;
+  padding-left: 3vw;
+}
+
+#smScrnOverlay #menuContainerHalf #overMenu li a #overlayAbout {
+  border-left: 6px rgba(205, 33, 42, 0.7) solid;
 }
 
 #smScrnOverlay #menuContainerHalf #overMenu #topLiOverlay {
   border-top: 2px black solid;
 }
 
-#smScrnOverlay #menuContainerHalf #overMenu a {
-  text-decoration: none;
-  color: black;
-  font-size: 3em;
-  font-weight: bold;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  padding: 0 20% 0 3vw;
-  margin-left: 3vw;
-}
-
-#smScrnOverlay #menuContainerHalf #overMenu #overlayHome {
-  border-left: 6px rgba(0, 140, 69, 0.6) solid;
-}
-
-#smScrnOverlay #menuContainerHalf #overMenu #overlayMenu {
-  border-left: 6px white solid;
-  padding: 0 22% 0 3vw;
-}
-
-#smScrnOverlay #menuContainerHalf #overMenu #overlayAbout {
-  border-left: 6px rgba(205, 33, 42, 0.7) solid;
-}
-
 #smScrnOverlay #menuContainerHalf #logoOverlay {
   grid-row: 3;
-  width: 200px;
+  width: 40vw;
+  min-width: 200px;
+  max-width: 340px;
   justify-self: center;
   align-self: center;
   position: relative;
-  bottom: 10vh;
+  bottom: 5vh;
 }
 
 /*Make menu appear on hamburger click*/
@@ -352,10 +354,6 @@ footer .topBtn .backTopBtn {
   #topNav #toggle:checked ~ label::after {
     transform: rotate(-36deg);
   }
-  #topNav #overMenu a {
-    position: relative;
-    right: 4vw;
-  }
   #phoneBox {
     height: 5vh;
     /*Makes phone number none clickable*/
@@ -393,6 +391,9 @@ footer .topBtn .backTopBtn {
   }
   #mainHomePage #mainMenu p {
     font-size: 2em;
+  }
+  #mainHomePage #mainMenu #mainBtnsList li {
+    box-shadow: 0.6vw 0.6vw rgba(131, 124, 124, 0.712);
   }
   #mainHomePage #mainMenu #mainBtnsList li a {
     font-size: 1.6em;
@@ -918,9 +919,7 @@ footer .topBtn .backTopBtn {
     width: 50vw;
     height: 315px;
     max-width: 560px;
-    padding: 10px;
     border-radius: 40px;
-    background: linear-gradient(to right, rgba(0, 140, 69, 0.6), rgba(244, 245, 240, 0.6), rgba(205, 33, 42, 0.7));
   }
 }
 

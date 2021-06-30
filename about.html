@@ -38,11 +38,14 @@
         <input type="checkbox" id="toggle">
         <label id="hamburger" for="toggle"></label>
         <div id="smScrnOverlay">
-            <ul id="overMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+            <div id="menuContainerHalf">
+                <ul id="overMenu">
+                    <li id="topLiOverlay"><a href="index.html"><span id="overlayHome">Home</span></a></li>
+                    <li><a href="menu.html"><span id="overlayMenu">Menu</span></a></li>
+                    <li><a href="about.html"><span id="overlayAbout">About</span></a></li>
+                </ul>
+                <img id="logoOverlay" src="/Media/kneadIconBlack.png" alt="Knead Pizza Logo">
+            </div>
         </div>
         <!--Nav buttons only visible on desktop-->
         <div id="headerNavBtns">
