@@ -86,6 +86,7 @@
         }
     }
 
+    /*adjust phone icon location as screen width shrinks*/
     @media screen and (max-width: 390px) {
         
         #phoneIcon {
@@ -94,6 +95,30 @@
 
         #phoneIconEnd {
             left: 10vw;
+        }
+    }
+
+    /*adjust phone number and phone icon sizes as screen height shrinks*/
+    @media screen and (max-height: 830px) {
+        
+        .phoneLink {
+            font-size: 0.7em;
+        }
+    }
+
+    /*adjust phone number and phone icon sizes as screen height shrinks*/
+    @media screen and (max-height: 690px) {
+        
+        .phoneLink {
+            position: relative;
+            bottom: 0.2vh;
+        }
+
+        #phoneIcon, #phoneIconEnd {
+            
+            img {
+                width: 15px;
+            }
         }
     }
 }

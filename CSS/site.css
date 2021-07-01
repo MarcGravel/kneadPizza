@@ -76,6 +76,9 @@
   align-items: center;
   z-index: 3;
   box-shadow: 0 4px 4px -2px rgba(73, 73, 73, 0.767);
+  /*adjust phone icon location as screen width shrinks*/
+  /*adjust phone number and phone icon sizes as screen height shrinks*/
+  /*adjust phone number and phone icon sizes as screen height shrinks*/
 }
 
 #phoneBox a:active, #phoneBox h2:active {
@@ -110,6 +113,22 @@
   }
   #phoneBox #phoneIconEnd {
     left: 10vw;
+  }
+}
+
+@media screen and (max-height: 830px) {
+  #phoneBox .phoneLink {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-height: 690px) {
+  #phoneBox .phoneLink {
+    position: relative;
+    bottom: 0.2vh;
+  }
+  #phoneBox #phoneIcon img, #phoneBox #phoneIconEnd img {
+    width: 15px;
   }
 }
 
@@ -281,17 +300,8 @@ footer {
   background-color: #4b4a4a;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  /*Sets position of footer elements*/
   /*Sets top of page button*/
   /*adjusts back-to-top button size to avoid overflow on very narrow screens */
-}
-
-footer #privPol {
-  width: 50vw;
-  grid-row: 2;
-  bottom: 1vh;
-  position: relative;
-  left: 5vw;
 }
 
 footer #cpyRit {
@@ -738,9 +748,6 @@ footer .topBtn .backTopBtn {
     font-size: 1.9em;
   }
   /***********CSS for Footer***********/
-  footer #privPol {
-    font-size: 1.9em;
-  }
   footer #cpyRit {
     font-size: 1.4em;
   }
@@ -1344,9 +1351,6 @@ footer .topBtn .backTopBtn {
     object-fit: cover;
   }
   /**********Footer**********/
-  footer #privPol {
-    font-size: 2.1em;
-  }
   footer #cpyRit {
     font-size: 1.7em;
   }
